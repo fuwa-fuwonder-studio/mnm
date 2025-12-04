@@ -145,17 +145,17 @@ body {
   justify-content: center; /* 中央寄せ */
   gap: 60px;               /* 左右の余白 */
   margin: 30px auto;
-  max-width: 1200px;       /* セクションの最大幅 */
+  max-width: 1000px;       /* セクションの最大幅 */
 }
 
 .app-icon {
-  width: 500px; 
+  width: 400px; 
   height: auto;
   display: block;
 }
 
 .app-title {
-  width: 500px;  
+  width: 400px;  
   height: auto;
   display: block;
 }
@@ -222,6 +222,6 @@ body {
   display: flex;
   margin: 0 auto;
   margin-bottom: 70px;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
