@@ -118,6 +118,7 @@ body {
 /*Top Page*/
 .hero-title {
   margin-top: 100px;
+  margin-bottom: 20px;
   fontsize: 22px;
 }
 /*トップページキャラクター*/
@@ -142,9 +143,9 @@ body {
   display: flex;
   align-items: center;     /* 上下の位置を揃える */
   justify-content: center; /* 中央寄せ */
-  gap: 70px;               /* 左右の余白 */
+  gap: 20px;               /* 左右の余白 */
   margin: 30px auto;
-  max-width: 1000px;       /* セクションの最大幅 */
+  max-width: 1200px;       /* セクションの最大幅 */
 }
 
 .app-icon {
@@ -170,7 +171,7 @@ body {
 .app-learnmore {
   margin: 0 auto;
   width: 250px;
-  margin-bottom: 80px;
+  margin-bottom: 100px;
 }
 /*Learn more Hover*/
 .btn-primary {
