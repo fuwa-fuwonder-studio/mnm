@@ -118,6 +118,7 @@ body {
   display: flex;
   gap: 20px; /* キャラの間隔を調整 */
   justify-content: center;
+  padding: 50px 64px;
 }
 
 .works-grid {
