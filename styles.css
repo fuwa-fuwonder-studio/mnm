@@ -1,13 +1,13 @@
 @font-face {
   font-family: "PaytoneOne";
-  src: url("assets/fonts/PaytoneOne-Regular.ttf") format("truetype");
+  src: url("assets/font/PaytoneOne-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Molengo";
-  src: url("assets/fonts/Molengo-Regular.ttf") format("truetype");
+  src: url("assets/font/Molengo-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
