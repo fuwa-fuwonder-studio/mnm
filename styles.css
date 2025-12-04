@@ -164,7 +164,6 @@ body {
   display: flex;
   flex-direction: column; 
   align-items: center; 
-  gap: 10px;
 }
 
 .apple-store-logo {
