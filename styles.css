@@ -164,7 +164,7 @@ body {
   display: flex;
   flex-direction: column; 
   align-items: center; 
-  gap: -20px;
+  gap: -50px;
 }
 
 .apple-store-logo {
@@ -212,18 +212,18 @@ body {
 
 /*Work Experience*/
 .works-title {
-  margin-top: 120px;
-  margin-bottom: 100px,
+  margin-top: 200px;
+  margin-bottom: 200px,
 }
 
 .works-grid {
-  width: 1000px;   /* ここを好きなサイズに */
+  width: 900px;   /* ここを好きなサイズに */
   height: auto;
   justify-content: center;
   gap: 20px;
   display: flex;
   margin: 0 auto;
   margin-bottom: 70px;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
