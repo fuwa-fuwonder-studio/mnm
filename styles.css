@@ -118,7 +118,7 @@ body {
 /*Top Page*/
 .hero-title {
   margin-top: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
   fontsize: 22px;
 }
 /*トップページキャラクター*/
@@ -131,11 +131,11 @@ body {
   display: flex;
   gap: 20px; /* キャラの間隔を調整 */
   justify-content: center;
-  padding: 40px 64px;
+  padding: 20px 64px;
 }
 
 .hero-tagline {
-  bottom: 80px;
+  margin-bottom: 60px;
 }
 
 /*My Furry Friends Section*/
