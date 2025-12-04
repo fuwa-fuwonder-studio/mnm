@@ -239,8 +239,8 @@ body {
   margin: 0 auto;
 }
 .value-item:nth-child(1) { margin-top: 0; }
-.value-item:nth-child(2) { margin-top: 40px; }
-.value-item:nth-child(3) { margin-top: 80px; }
+.value-item:nth-child(2) { margin-top: -30px; }
+.value-item:nth-child(3) { margin-top: -30px; }
 
 /* 1個目だけ中央に配置 */
 .values-grid .value-item:first-child {
@@ -276,7 +276,7 @@ body {
 
 .value-image-wrapper {
   position: relative;         /* 子要素の absolute の基準にする */
-  width: 450px;               /* 画像サイズに合わせて調整 */
+  width: 400px;               /* 画像サイズに合わせて調整 */
 }
 
 .value-image-wrapper img {
@@ -288,9 +288,9 @@ body {
 /* ★ 画像の中央に重ねるテキスト部分 */
 .value-text {
   position: absolute;
-  top: 40%;
-  left: 40%;
-  transform: translate(-40%, -40%); /* 完全ど真ん中に配置 */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 完全ど真ん中に配置 */
   text-align: center;
 }
 
