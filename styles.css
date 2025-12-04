@@ -158,7 +158,6 @@ body {
   width: 600px;  
   height: auto;
   display: block;
-  height: auto;
 }
 
 .app-content {
@@ -170,6 +169,7 @@ body {
 .app-store-logo {
   width: 220px;  
   height: auto;
+  display: block;
 }
 
 .app-learnmore {
