@@ -46,7 +46,7 @@ img {
 
 /* ロゴのサイズ調整（お好みで） */
 .logo img {
-  height: 100px;                 /* Figmaに近い高さに調整 */
+  height: 150px;                 /* Figmaに近い高さに調整 */
   width: auto;
 }
 
@@ -76,7 +76,7 @@ img {
 /* 言語切り替えは右上に寄せる */
 .language-switcher {
   position: absolute;
-  top: 16px;
+  top: 20px;
   right: 32px;
   font-size: 16px;
 }
@@ -103,4 +103,8 @@ main {
   max-width: 1300px;   /* 好きな幅にする。一般的には 1000〜1400px */
   margin: 0 auto;      /* ← 中央揃えの魔法 */
   padding: 0 25px;     /* 画面が狭いときの左右余白（必須） */
+}
+
+body {
+  text-align: center;
 }
