@@ -2,73 +2,123 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>FuwaFuwonder Studio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>FuwaFuwonder Studio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Hello, FuwaFuwonder</h1>
-  <img src="assets/img/muffuffu.png" alt="Muffuffu">
-
-  <!-- ヘッダー -->
+  <!-- ========== Header ========== -->
   <header class="site-header">
-    <div class="logo">Fuwa Fuwonder Studio</div>
+    <div class="header-inner">
+      <!-- ロゴ -->
+      <a href="index.html" class="logo">
+        <img src="assets/img/FFS Logo.png" alt="FuwaFuwonder Studio logo">
+      </a>
 
-    <nav class="nav-desktop">
-      <a href="about.html">About</a>
-      <a href="hairball.html">Hairball Friends</a>
-      <a href="world.html">What makes this World</a>
-      <a href="mff.html">My Furry Friends</a>
-      <a href="mailto:yourmail@example.com">Contact</a>
-    </nav>
-
-    <!-- スマホ用ハンバーガー -->
-    <button class="nav-toggle" aria-label="Open menu">
-      ☰
-    </button>
+      <!-- グローバルナビ -->
+      <nav class="main-nav">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="hairball-friends.html">Hairball Friends</a></li>
+          <li><a href="mff.html">My Furry Friends (iOS App)</a></li>
+          <li><a href="world.html">What makes this World</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="language-switcher">
+      <button data-lang="en">EN</button>
+      <span>·</span>
+      <button data-lang="jp">JP</button>
+    </div>
   </header>
 
-  <!-- スマホ用メニュー -->
-  <nav class="nav-mobile" id="mobileMenu">
-    <button class="nav-close" aria-label="Close menu">×</button>
-    <a href="about.html">About</a>
-    <a href="hairball.html">Hairball Friends</a>
-    <a href="world.html">What makes this World</a>
-    <a href="mff.html">My Furry Friends</a>
-    <a href="mailto:yourmail@example.com">Contact</a>
-  </nav>
-
-  <!-- Hero：MFF イントロ -->
+  <!-- ========== Hero Section ========== -->
   <main>
     <section class="hero">
-      <h1>My Furry Friends</h1>
-      <p>A tiny app for gentle moments with the animals you love.</p>
-      <img src="assets/img/mff-hero.png" alt="My Furry Friends preview" class="hero-image" />
-      <a class="appstore-button" href="https://apps.apple.com/〜">
-        Download on the App Store
-      </a>
+      <div class="hero-inner">
+        <h1 class="hero-title">Where wonder starts moving.</h1>
+
+        <div class="hero-characters">
+          <img src="assets/img/fuffuffu.png" alt="Fuffuffu" class="hero-character">
+          <img src="assets/img/baffuffu.png" alt="Baffuffu" class="hero-character">
+          <img src="assets/img/muffuffu.png" alt="Muffuffu" class="hero-character">
+          <img src="assets/img/moffuffu.png" alt="Moffuffu" class="hero-character">
+        </div>
+
+        <p class-name="hero-tagline">
+          A tiny creative world shaped by softness, curiosity, and small wonders.
+        </p>
+      </div>
     </section>
 
-    <!-- MFF の世界観セクション -->
-    <section class="section" id="world">
-      <h2>The World of MFF</h2>
-      <p>ここにさっき一緒に考えたテキストを入れる</p>
-      <img src="assets/img/baffuffu.png" alt="Baffuffu">
+    <!-- ========== My Furry Friends (App) Section ========== -->
+    <section class="app-section">
+      <div class="app-inner">
+        <!-- アプリアイコン -->
+        <div class="app-icon-wrapper">
+          <!-- 例：assets/img/app-icon-mff.png -->
+          <img src="assets/img/MFF_allicon_toppage.png" alt="My Furry Friends app icon" class="app-icon">
+        </div>
+
+        <!-- アプリ説明ブロック -->
+        <div class="app-content">
+          <img src="assets/img/MFF_logo_toppage.png" alt="My Furry Friends app icon" class="app-title">
+          </h2>
+
+          <!-- App Store バッジ（公式素材に差し替え推奨） -->
+          <a href="https://apps.apple.com" class="app-store-link" target="_blank" rel="noopener">
+            <img src="Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917 1.png" alt="Download on the App Store">
+          </a>
+
+          <!-- 詳細ページへの導線（mff.html などに飛ばす想定） -->
+          <a href="mff.html" class="btn-primary">
+            <img src="CTA_PC_default.png" alt="learn more">
+          </a>
+        </div>
+      </div>
     </section>
 
-    <!-- Hairball Friends 紹介バナーへリンクなど -->
-    <section class="section">
-      <h2>Meet the Hairball Friends</h2>
-      <img src="assets/img/hairball-group.png" alt="Hairball Friends" />
-      <a href="hairball.html" class="link-more">Learn more about them →</a>
+    <!-- ========== Explore Works Section ========== -->
+    <section class="works-section">
+      <div class="works-inner">
+        <h2 class="works-title">Explore Works</h2>
+
+        <div class="works-grid">
+          <!-- Marketing -->
+          <a href="portfolio-marketing.html" class="work-bubble work-bubble--marketing">
+            <!-- 例：assets/img/bubble-marketing.png -->
+            <img src="assets/img/Marketing.png" alt="Marketing works" class="Marketing.png">
+            <span class="work-bubble-label">Marketing</span>
+          </a>
+
+          <!-- Creative -->
+          <a href="portfolio-creative.html" class="work-bubble work-bubble--creative">
+            <img src="assets/img/Creative.png" alt="Creative works" class="Creative.png">
+            <span class="work-bubble-label">Creative</span>
+          </a>
+
+          <!-- Branding -->
+          <a href="portfolio-branding.html" class="work-bubble work-bubble--branding">
+            <img src="assets/img/Branding.png" alt="Branding works" class="Branding.png">
+            <span class="work-bubble-label">Branding</span>
+          </a>
+
+          <!-- Produce -->
+          <a href="portfolio-produce.html" class="work-bubble work-bubble--produce">
+            <img src="assets/img/Produce.png" alt="Produce works" class="Produce.png">
+            <span class="work-bubble-label">Produce</span>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <!-- フッター -->
+  <!-- ========== Footer ========== -->
   <footer class="site-footer">
-    <p>Thanks for visiting this tiny world. May softness follow you today.</p>
+    <small>© FuwaFuwonder Studio. All colours, cats, and hairballs reserved.</small>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
