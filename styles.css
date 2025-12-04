@@ -238,6 +238,9 @@ body {
   max-width: 1000px;
   margin: 0 auto;
 }
+.value-item:nth-child(1) { margin-top: 0; }
+.value-item:nth-child(2) { margin-top: 40px; }
+.value-item:nth-child(3) { margin-top: 80px; }
 
 /* 1個目だけ中央に配置 */
 .values-grid .value-item:first-child {
