@@ -98,3 +98,9 @@ img {
   top: 0;
   z-index: 1000;
 }
+
+main {
+  max-width: 1300px;   /* 好きな幅にする。一般的には 1000〜1400px */
+  margin: 0 auto;      /* ← 中央揃えの魔法 */
+  padding: 0 25px;     /* 画面が狭いときの左右余白（必須） */
+}
