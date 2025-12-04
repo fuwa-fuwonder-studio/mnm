@@ -233,7 +233,7 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: auto auto; 
-  gap: 60px;
+  gap: 0px;
   justify-items: center;
   max-width: 1000px;
   margin: 0 auto;
@@ -277,7 +277,7 @@ body {
 
 .value-image-wrapper {
   position: relative;         /* 子要素の absolute の基準にする */
-  width: 350px;               /* 画像サイズに合わせて調整 */
+  width: 400px;               /* 画像サイズに合わせて調整 */
 }
 
 .value-image-wrapper img {
@@ -293,13 +293,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%); /* 完全ど真ん中に配置 */
   text-align: center;
-
-  /* 背景をつけて読みやすくしたい場合は以下 */
-  /* background: rgba(255, 255, 255, 0.6); */
-  /* padding: 10px; */
 }
 
-.value-text h3 {
+.value-text h2 {
   margin: 0;
   font-size: 24px;
   font-family: "PaytoneOne";
