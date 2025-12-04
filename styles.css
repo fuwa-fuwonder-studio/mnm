@@ -127,6 +127,7 @@ body {
   gap: 20px;
   display: flex;
   margin: 0 auto;
+  bottom: 70px;
 }
 
 .app-inner {
@@ -139,12 +140,12 @@ body {
 }
 
 .app-icon {
-  width: 180px;  /* 好きなサイズに調整 可愛い */
+  width: 300px;  /* 好きなサイズに調整 可愛い */
   height: auto;
 }
 
 .app-title {
-  width: 260px;  /* ここも好みで */
+  width: 300px;  /* ここも好みで */
   height: auto;
   display: block;
   margin-bottom: 20px;
@@ -154,8 +155,27 @@ body {
   display: flex;
   flex-direction: column; /* 縦に並べる */
   align-items: flex-start; /* 左揃え（Figmaに近い感じ） */
-  gap: 18px;
+  width: 200px;
+  height: auto;
 }
 
+.app-learnmore {
+  margin: 0 auto;
+}
+
+.hero-title {
+  top: 50px;
+  bottom: 20px;
+  fontsize: 20px;
+}
+
+.hero-tagline {
+  bottom: 70px;
+}
+
+.works-title {
+  top: 70px;
+  bottom: 20px;
+}
 
 
