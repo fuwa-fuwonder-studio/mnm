@@ -164,7 +164,7 @@ body {
   display: flex;
   flex-direction: column; 
   align-items: center; 
-  gap: -50px;
+  gap: 10px;
 }
 
 .apple-store-logo {
@@ -174,7 +174,7 @@ body {
 }
 
 .app-learnmore {
-  margin: 10px auto;
+  margin: 0px auto;
   width: 200px;
 }
 /*Learn more Hover*/
@@ -212,8 +212,7 @@ body {
 
 /*Work Experience*/
 .works-title {
-  margin-top: 150px;
-  margin-bottom: 200px,
+  padding: 70px;
 }
 
 .works-grid {
