@@ -110,11 +110,22 @@ body {
 }
 
 .hero-character {
-  width: 350px;   /* ここを好きなサイズに */
+  width: 200px;   /* ここを好きなサイズに */
   height: auto;
 }
 
 .hero-characters {
+  display: flex;
+  gap: 20px; /* キャラの間隔を調整 */
+  justify-content: center;
+}
+
+.works-grid {
+  width: 350px;   /* ここを好きなサイズに */
+  height: auto;
+}
+
+.works-grid {
   display: flex;
   gap: 20px; /* キャラの間隔を調整 */
   justify-content: center;
