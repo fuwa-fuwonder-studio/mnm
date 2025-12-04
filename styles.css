@@ -15,8 +15,8 @@
 body {
   margin: 0;
   font-family: "Molengo", sans-serif;
-  background: #f9f3e7;
-  color: #5a4334;
+  background: #FFEBD1;
+  color: #A37A66;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,13 +31,13 @@ img {
 /* ====== Header layout ====== */
 
 .site-header {
-  background: #f9f3e7;          /* 背景色（全体と揃える） */
+  background: #FFEBD1;          /* 背景色（全体と揃える） */
   padding: 16px 64px;           /* 上下・左右の余白 */
 }
 
 /* ロゴ＋ナビを横並びにする箱 */
 .header-inner {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;               /* 中央寄せ */
   display: flex;
   align-items: center;          /* 縦方向センター */
@@ -46,7 +46,7 @@ img {
 
 /* ロゴのサイズ調整（お好みで） */
 .logo img {
-  height: 36px;                 /* Figmaに近い高さに調整 */
+  height: 60px;                 /* Figmaに近い高さに調整 */
   width: auto;
 }
 
@@ -62,14 +62,15 @@ img {
 /* ナビのリンクの見た目 */
 .main-nav a {
   text-decoration: none;
-  color: #8c6f5a;               /* Figmaの文字色に近づける */
+  color: #A37A66;               /* Figmaの文字色に近づける */
   font-family: "Molengo", sans-serif;
-  font-size: 14px;
+  font-size: 30px;
 }
 
 /* ホバーしたときの色（お好みで） */
 .main-nav a:hover {
   color: #c86a5b;
+  font-weight: bold; 
 }
 
 /* 言語切り替えは右上に寄せる */
@@ -89,7 +90,7 @@ img {
 }
 
 .language-switcher button:hover {
-  color: #c86a5b;
+  color: #EAA287;
 }
 
 .site-header {
