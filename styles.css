@@ -46,7 +46,7 @@ img {
 
 /* ロゴのサイズ調整（お好みで） */
 .logo img {
-  height: 60px;                 /* Figmaに近い高さに調整 */
+  height: 100px;                 /* Figmaに近い高さに調整 */
   width: auto;
 }
 
@@ -64,13 +64,13 @@ img {
   text-decoration: none;
   color: #A37A66;               /* Figmaの文字色に近づける */
   font-family: "Molengo", sans-serif;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 /* ホバーしたときの色（お好みで） */
 .main-nav a:hover {
   color: #c86a5b;
-  font-weight: bold; 
+  font-size: 22px;
 }
 
 /* 言語切り替えは右上に寄せる */
@@ -78,7 +78,7 @@ img {
   position: absolute;
   top: 16px;
   right: 32px;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .language-switcher button {
