@@ -497,6 +497,18 @@ body {
   justify-content: center;
   text-align: left;
 }
+
+.The-world-of-MFF-text h3 {
+  margin-top: 20px;   /* h3 の上の余白 */
+  margin-bottom: 8px; /* h3 の下の余白を短めに */
+}
+
+.The-world-of-MFF-text p {
+  margin-top: 0px;    /* デフォルト margin を消す */
+  margin-bottom: 20px; /* 次の H3 までの間隔 */
+  line-height: 1.6;   /* 行間（文章内の間）を整える */
+}
+
 .MFF-screenshots {
   width: 200px;
   height: auto;
@@ -517,6 +529,17 @@ body {
   align-items: flex-start; /* ← 左寄せにする正しい指定 */
   justify-content: center;
   text-align: left;
+}
+
+.How-it-was-made h3 {
+  margin-top: 20px;   /* h3 の上の余白 */
+  margin-bottom: 8px; /* h3 の下の余白を短めに */
+}
+
+.How-it-was-made p {
+  margin-top: 0px;    /* デフォルト margin を消す */
+  margin-bottom: 20px; /* 次の H3 までの間隔 */
+  line-height: 1.6;   /* 行間（文章内の間）を整える */
 }
 
 .MFF-Thankyou {
