@@ -474,12 +474,12 @@ body {
 }
 
 .Romeo-photo img {
-  width: 120px;  /* ← ここがポイント！ */
+  width: 150px;  /* ← ここがポイント！ */
   height: auto;
 }
 
 .Snuffy-Meltan-photos img {
-  width: 200px;
+  width: 150px;
   height: auto;
 }
 
