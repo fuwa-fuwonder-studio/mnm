@@ -470,7 +470,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; 
-  gap: 15px;
+}
+
+.Snuffy-Meltan-photos {
+  width: 200px;
+  height: auto;
 }
 
 
