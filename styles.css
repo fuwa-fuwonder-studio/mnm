@@ -293,8 +293,9 @@ body {
 /* ====== Hairball Friends layout ====== */
 .haorballfriends-hero-inner {
   display: flex;
+  margin: 0 auto;  
   gap: 60px;
-  padding: 40px, auto;
+  padding: 40px auto;
   justify-content: center; 
   margin-bottom: 80px;
   align-items: center;
