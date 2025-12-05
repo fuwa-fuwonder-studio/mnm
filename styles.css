@@ -474,12 +474,12 @@ body {
 }
 
 .Romeo-photo img {
-  width: 150px;  /* ← ここがポイント！ */
+  width: 160px;  /* ← ここがポイント！ */
   height: auto;
 }
 
 .Snuffy-Meltan-photos img {
-  width: 150px;
+  width: 160px;
   height: auto;
 }
 
@@ -501,7 +501,7 @@ body {
 }
 
 .The-world-of-MFF-text h3 {
-  margin-top: 20px;   /* h3 の上の余白 */
+  margin-top: 15px;   /* h3 の上の余白 */
   margin-bottom: 8px; /* h3 の下の余白を短めに */
 }
 
@@ -521,7 +521,7 @@ body {
 }
 
 .MFF-screenshots img {
-  width: 165px;
+  width: 170px;
   height: auto;
 }
 
@@ -537,7 +537,7 @@ body {
 }
 
 .How-it-was-made h3 {
-  margin-top: 20px;   /* h3 の上の余白 */
+  margin-top: 15px;   /* h3 の上の余白 */
   margin-bottom: 8px; /* h3 の下の余白を短めに */
 }
 
