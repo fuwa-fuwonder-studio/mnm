@@ -295,7 +295,7 @@ body {
   display: flex;
   gap: 60px;
   padding: 40px, auto;
-  margin: 0 auto;  
+  justify-content: center; 
   margin-bottom: 80px;
   align-items: center;
 }
@@ -306,7 +306,7 @@ body {
 }
 
 .hairball-friends-SnuffyandFriends {
-  width: 600px;
+  width: 700px;
   height: auto;
 }
 
@@ -315,7 +315,7 @@ body {
   display: flex;
   gap: 60px;
   padding: 40px, auto;
-  margin: 0 auto; 
+  justify-content: center; 
   align-items: center;
 }
 
@@ -329,7 +329,7 @@ body {
   display: flex;
   gap: 60px;
   padding: 40px, auto;
-  margin: 0 auto; 
+  justify-content: center; 
   align-items: center;
 }
 
@@ -343,7 +343,7 @@ body {
   display: flex;
   gap: 60px;
   padding: 40px, auto;
-  margin: 0 auto; 
+  justify-content: center; 
   align-items: center;
 }
 
@@ -357,7 +357,7 @@ body {
   display: flex;
   gap: 60px;
   padding: 40px, auto;
-  margin: 0 auto; 
+  justify-content: center; 
   align-items: center;
 }
 
@@ -371,12 +371,16 @@ body {
   display: flex;
   gap: 60px;
   padding: 40px, auto;
-  margin: 0 auto; 
+  justify-content: center; 
   align-items: center;
 }
 
 .Snuffy {
   align-items: center;    
   justify-content: center;
+}
+
+.Snufy-last-paragraph {
+  width: 1000px;
 }
   
