@@ -11,10 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* まずは日本語（jp）をすべて非表示にする */
-[data-lang="jp"] {
-  display: none;
-}
+
 /* ページ全体のフェード用 */
 body {
   opacity: 0;
