@@ -711,7 +711,131 @@ body {
   margin-bottom: 20px;
 }
 
-  
+/* スマホ */
+/* =========================
+   スマホ用レイアウト
+   ========================= */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0 16px;
+  }
+
+  /* 全体の横幅を画面にフィットさせる */
+  main,
+  .The-world-of-MFF,
+  .Why-I-built-this-app,
+  .How-it-was-made,
+  .values-grid,
+  .Moffuffu-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ヒーロー（タイトル＋キャラたち） */
+  .hero-inner {
+    text-align: center;
+    padding: 40px 0;
+  }
+
+  .hero-characters {
+    gap: 8px;
+  }
+
+  .hero-character {
+    width: 60px;   /* スマホ用にさらに小さく */
+  }
+
+  /* アプリ紹介：縦並びにする */
+  .app-inner {
+    flex-direction: column;
+    gap: 24px;
+    margin: 40px auto;
+  }
+
+  .app-icon {
+    width: 260px;
+  }
+
+  .app-title {
+    width: 260px;
+  }
+
+  .app-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* MFF テキスト＋スクショの並び → 縦積み */
+  .The-world-of-MFF {
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 0;
+  }
+
+  .MFF-screenshots {
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+  }
+
+  .MFF-screenshots img {
+    width: 130px;
+  }
+
+  /* Why I built this app セクションも縦積み */
+  .Why-I-built-this-app {
+    flex-direction: column;
+    gap: 24px;
+    padding: 40px 0;
+  }
+
+  .Why-I-built-this-app-text {
+    width: 100%;
+  }
+
+  .Snuffy-Meltan-photos img,
+  .Romeo-photo img {
+    width: 180px;
+  }
+
+  .Romeo-photo {
+    padding: 0;
+  }
+
+  /* Values の画像とテキストもスマホでは縦向き＆幅を縮める */
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .value-image-wrapper img {
+    width: 260px;
+    height: auto;
+  }
+
+  /* 塗り絵エリアもスマホ幅に合わせる */
+  .Nurie {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+  }
+
+  .Nurie img,
+  .Nurie div img {
+    width: 100%;
+    height: auto;
+  }
+
+  .Nurie-button-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .Nurie-button-row h2 {
+    font-size: 14px;
+  }
+}
   
 
 
