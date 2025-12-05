@@ -576,14 +576,14 @@ body {
 
 /* --- 塗り絵全体の親エリア --- */
 .Nurie {
-  position: relative;      /* 子要素を absolute で重ねるために必要 */
-  width: 800px;            /* 画像と同じ幅に調整 */
-  height: 556px;           /* 画像と同じ高さに調整 */
-  margin: 0 auto;          /* 中央揃え */
+  position: relative;
+  width: 800px;
+  height: 556px;
+  margin: 0 auto;
 }
 
-/* --- ベース画像 nurie0 --- */
-.Nurie img:first-child {
+/* --- ベース画像 nurie0（常に表示） --- */
+.Nurie > img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -594,28 +594,30 @@ body {
   opacity: 1;
 }
 
-/* --- 上に重ねるカラー画像（全デフォルト非表示） --- */
-.Nurie div img {
+/* --- カラー画像（デフォルト非表示） --- */
+.Nurie > div {
+  position: absolute;   /* これ超重要！ */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Nurie > div img {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
-  opacity: 0;          /* 初期状態は透明 */
-  transition: opacity 0.4s ease; /* フェードアニメーション付き */
+  opacity: 0;               /* デフォルト透明 */
+  transition: opacity 0.4s ease;
   z-index: 2;
 }
 
-/* JSで visible クラスを付けた時に表示 */
-.Nurie div img.visible {
+/* --- JSで visible クラスが付いた時に表示 --- */
+.Nurie img.visible {
   opacity: 1;
-}
-
-/* Nurie のベース以外の画像をデフォルト非表示 */
-.Nurie div img {
-  opacity: 0;
-  transition: opacity 0.3s ease;
 }
 
 /* ボタン全体のコンテナ */
