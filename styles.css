@@ -261,7 +261,7 @@ body {
 /* 下の２つを横並びにして、上にかぶせる */
 .values-bottom-row {
   display: flex;
-  gap: 50px;           /* 左右の間隔 */
+  gap: 70px;           /* 左右の間隔 */
   margin-top: -130px;  /* ここで「かぶせる」量を調整 */
 }
 
