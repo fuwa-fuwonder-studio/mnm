@@ -248,8 +248,8 @@ body {
   margin: 0 auto;
 }
 .value-item:nth-child(1) { margin-top: 0; }
-.value-item:nth-child(2) { margin-top: -30px; }
-.value-item:nth-child(3) { margin-top: -30px; }
+.value-item:nth-child(2) { margin-top: -100px; }
+.value-item:nth-child(3) { margin-top: -100px; }
 
 /* 1個目だけ中央に配置 */
 .values-grid .value-item:first-child {
