@@ -324,9 +324,10 @@ body {
 
 .Muffuffu {
   display: flex;
-  flex-direction: column;   /* h2 と p を縦並びに */
-  align-items: left;      /* 中央揃え */
+  flex-direction: column;
+  align-items: flex-start; /* ← 左寄せにする正しい指定 */
   justify-content: center;
+  text-align: left;
 }
 
 .Baffuffu-container {
@@ -342,9 +343,10 @@ body {
 
 .Baffuffu {
   display: flex;
-  flex-direction: column;   /* h2 と p を縦並びに */
-  align-items: right;      /* 中央揃え */
+  flex-direction: column;
+  align-items: flex-start; /* ← 左寄せにする正しい指定 */
   justify-content: center;
+  text-align:　right;
 }
 
 .Fuffuffu-container {
@@ -360,9 +362,10 @@ body {
 
 .Fuffuffu {
   display: flex;
-  flex-direction: column;   /* h2 と p を縦並びに */
-  align-items: left;      /* 中央揃え */
+  flex-direction: column;
+  align-items: flex-start; /* ← 左寄せにする正しい指定 */
   justify-content: center;
+  text-align: left;
 }
 
 .Moffuffu-container {
@@ -378,9 +381,10 @@ body {
 
 .Moffuffu {
   display: flex;
-  flex-direction: column;   /* h2 と p を縦並びに */
-  align-items: right;      /* 中央揃え */
+  flex-direction: column;
+  align-items: flex-start; /* ← 左寄せにする正しい指定 */
   justify-content: center;
+  text-align:　right;
 }
 
 .Snuffy-container {
@@ -396,9 +400,10 @@ body {
 
 .Snuffy {
   display: flex;
-  flex-direction: column;   /* h2 と p を縦並びに */
-  align-items: left;      /* 中央揃え */
+  flex-direction: column;
+  align-items: flex-start; /* ← 左寄せにする正しい指定 */
   justify-content: center;
+  text-align: left;
 }
 
 .Snufy-last-paragraph {
