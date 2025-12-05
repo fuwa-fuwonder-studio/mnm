@@ -16,18 +16,18 @@
   display: none;
 }
 
-/* ページ全体のフェード用 */
+/* ページ全体のフェード */
 body {
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 
-/* 読み込み完了後に付けるクラス → フェードイン */
+/* フェードイン */
 body.page-loaded {
   opacity: 1;
 }
 
-/* ページ遷移前に付けるクラス → フェードアウト */
+/* フェードアウト */
 body.page-fade-out {
   opacity: 0;
 }
@@ -55,29 +55,29 @@ img {
 /* ====== Header layout ====== */
 
 .site-header {
-  background: #FFEBD1;          /* 背景色（全体と揃える） */
-  padding: 5px 64px;           /* 上下・左右の余白 */
+  background: #FFEBD1;          
+  padding: 5px 64px;          
 }
 
 /* ロゴ＋ナビを横並びにする箱 */
 .header-inner {
   max-width: 1300px;
-  margin: 0 auto;               /* 中央寄せ */
+  margin: 0 auto;               
   display: flex;
-  align-items: center;          /* 縦方向センター */
+  align-items: center;          
   justify-content: space-between;
 }
 
-/* ロゴのサイズ調整（お好みで） */
+/* ロゴのサイズ調整*/
 .logo img {
-  height: 150px;                 /* Figmaに近い高さに調整 */
+  height: 150px;                
   width: auto;
 }
 
-/* ナビゲーション（ul）を横並びに */
+/* ナビゲーションを横並びに */
 .main-nav ul {
   display: flex;
-  gap: 56px;                    /* メニュー同士の間隔。Figma見ながら調整 */
+  gap: 56px;                   
   list-style: none;
   margin: 0;
   padding: 0;
@@ -86,12 +86,12 @@ img {
 /* ナビのリンクの見た目 */
 .main-nav a {
   text-decoration: none;
-  color: #A37A66;               /* Figmaの文字色に近づける */
+  color: #A37A66;              
   font-family: "Molengo", sans-serif;
   font-size: 18px;
 }
 
-/* ホバーしたときの色（お好みで） */
+/* ホバーしたときの色　*/
 .main-nav a:hover {
   color: #c86a5b;
 }
@@ -123,9 +123,9 @@ img {
 }
 
 main {
-  max-width: 1300px;   /* 好きな幅にする。一般的には 1000〜1400px */
-  margin: 0 auto;      /* ← 中央揃えの魔法 */
-  padding: 0 25px;     /* 画面が狭いときの左右余白（必須） */
+  max-width: 1300px;   
+  margin: 0 auto;      
+  padding: 0 25px;     
 }
 
 body {
@@ -150,7 +150,7 @@ body {
 
 .hero-characters {
   display: flex;
-  gap: 20px; /* キャラの間隔を調整 */
+  gap: 20px; 
   justify-content: center;
   padding: 20px 64px;
 }
@@ -162,11 +162,11 @@ body {
 /*My Furry Friends Section*/
 .app-inner {
   display: flex;
-  align-items: center;     /* 上下の位置を揃える */
-  justify-content: center; /* 中央寄せ */
-  gap: 60px;               /* 左右の余白 */
+  align-items: center;     
+  justify-content: center; 
+  gap: 60px;               
   margin: 30px auto;
-  max-width: 1000px;       /* セクションの最大幅 */
+  max-width: 1000px;       
 }
 
 .app-icon {
@@ -209,7 +209,7 @@ body {
   display: block;
 }
 
-/* 最初に表示される画像（default） */
+/* 最初に表示される画像 */
 .btn-primary img:first-child {
   position: absolute;
   top: 0;
@@ -217,9 +217,9 @@ body {
   transition: opacity 0.25s ease;
 }
 
-/* ホバー画像（hover） */
+/* ホバー画像　*/
 .btn-primary img:last-child {
-  opacity: 0; /* 最初は非表示 */
+  opacity: 0; 
   transition: opacity 0.25s ease;
 }
 
@@ -239,7 +239,7 @@ body {
 }
 
 .works-grid {
-  width: 900px;   /* ここを好きなサイズに */
+  width: 900px;   
   height: auto;
   justify-content: center;
   gap: 20px;
@@ -269,11 +269,11 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0;              /* 真ん中と下段の間はマージンで調整 */
+  gap: 0;              
   margin: 40px auto 80px;
 }
 
-/* 上の円（中央） */
+/* 上の円 */
 .value-item-center {
   position: relative;
 }
@@ -281,14 +281,14 @@ body {
 /* 下の２つを横並びにして、上にかぶせる */
 .values-bottom-row {
   display: flex;
-  gap: 70px;           /* 左右の間隔 */
-  margin-top: -120px;  /* ここで「かぶせる」量を調整 */
+  gap: 70px;          
+  margin-top: -120px;  
 }
 
-/* 画像＋テキストを重ねるための共通ラッパー */
+/* 画像＋テキストを重ねる */
 .value-image-wrapper {
   position: relative;
-  width: 360px;        /* 円のサイズに合わせて調整 */
+  width: 360px;        
   height: 360px;
 }
 
@@ -298,7 +298,7 @@ body {
   display: block;
 }
 
-/* 画像のド真ん中にテキストを配置（共通） */
+/* 画像のド真ん中にテキストを配置 */
 .value-text-center,
 .value-text-left,
 .value-text-right {
@@ -307,7 +307,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  padding: 10px, 10px;     /* 円のフチに文字がくっつかないように余白 */
+  padding: 10px, 10px;     
 }
 
 /* ====== Hairball Friends layout ====== */
@@ -345,7 +345,7 @@ body {
 .Muffuffu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ← 左寄せにする正しい指定 */
+  align-items: flex-start; 
   justify-content: center;
   text-align: left;
 }
@@ -364,7 +364,7 @@ body {
 .Baffuffu {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* ← 左寄せにする正しい指定 */
+  align-items: flex-end; 
   justify-content: center;
   text-align:　right;
 }
@@ -383,7 +383,7 @@ body {
 .Fuffuffu {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ← 左寄せにする正しい指定 */
+  align-items: flex-start; 
   justify-content: center;
   text-align: left;
 }
@@ -402,7 +402,7 @@ body {
 .Moffuffu {
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* ← 左寄せにする正しい指定 */
+  align-items: flex-end; 
   justify-content: center;
   text-align:　right;
 }
@@ -421,7 +421,7 @@ body {
 .Snuffy {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ← 左寄せにする正しい指定 */
+  align-items: flex-start; 
   justify-content: center;
   text-align: left;
 }
@@ -481,7 +481,7 @@ body {
 .Why-I-built-this-app-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ← 左寄せにする正しい指定 */
+  align-items: flex-start; 
   justify-content: center;
   text-align: left;
 }
@@ -494,7 +494,7 @@ body {
 }
 
 .Romeo-photo img {
-  width: 160px;  /* ← ここがポイント！ */
+  width: 160px;  
   height: auto;
 }
 
@@ -507,10 +507,10 @@ body {
   width: 1000px;
   margin: 0 auto;
   display: flex;
-  gap: 40px;                /* テキストと画像の間 */
+  gap: 40px;                
   padding: 70px 0;
-  align-items: center;      /* 縦方向の中心を揃える */
-  justify-content: center;  /* 横方向の中心を揃える */
+  align-items: center;      
+  justify-content: center;  
 }
 
 .The-world-of-MFF-text {
@@ -521,14 +521,14 @@ body {
 }
 
 .The-world-of-MFF-text h3 {
-  margin-top: 15px;   /* h3 の上の余白 */
-  margin-bottom: 8px; /* h3 の下の余白を短めに */
+  margin-top: 15px;   
+  margin-bottom: 8px; 
 }
 
 .The-world-of-MFF-text p {
-  margin-top: 0px;    /* デフォルト margin を消す */
-  margin-bottom: 20px; /* 次の H3 までの間隔 */
-  line-height: 1.6;   /* 行間（文章内の間）を整える */
+  margin-top: 0px;    
+  margin-bottom: 20px; 
+  line-height: 1.6;   
 }
 
 /* スクリーンショット画像を2枚並列にする */
@@ -551,20 +551,20 @@ body {
   display: flex;
   padding: 0px 0;
   flex-direction: column;
-  align-items: flex-start; /* ← 左寄せにする正しい指定 */
+  align-items: flex-start; 
   justify-content: center;
   text-align: left;
 }
 
 .How-it-was-made h3 {
-  margin-top: 15px;   /* h3 の上の余白 */
-  margin-bottom: 8px; /* h3 の下の余白を短めに */
+  margin-top: 15px;  
+  margin-bottom: 8px; 
 }
 
 .How-it-was-made p {
-  margin-top: 0px;    /* デフォルト margin を消す */
-  margin-bottom: 20px; /* 次の H3 までの間隔 */
-  line-height: 1.6;   /* 行間（文章内の間）を整える */
+  margin-top: 0px;    
+  margin-bottom: 20px; 
+  line-height: 1.6;   
 }
 
 .MFF-Thankyou {
@@ -616,7 +616,7 @@ body {
 
 /* --- カラー画像（デフォルト非表示） --- */
 .Nurie > div {
-  position: absolute;   /* これ超重要！ */
+  position: absolute;   
   top: 0;
   left: 0;
   width: 100%;
@@ -630,7 +630,7 @@ body {
   transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
-  opacity: 0;               /* デフォルト透明 */
+  opacity: 0;               
   transition: opacity 0.4s ease;
   z-index: 2;
 }
@@ -653,9 +653,9 @@ body {
 .Nurie-button-1,
 .Nurie-button-2 {
   display: flex;
-  justify-content: center;   /* 中央揃え */
-  gap: 40px;                 /* 各ボタンの間隔 */
-  flex-wrap: wrap;           /* 万一幅が狭いときに折り返し */
+  justify-content: center;   
+  gap: 40px;                 
+  flex-wrap: wrap;           
 }
 
 /* 各ボタンの基本スタイル */
@@ -675,11 +675,11 @@ body {
 
 /* それぞれ好きな色に変更できる */
 .Nurie-button-marketing {
-  color: #FD8A7A;   /* 例：ピンク */
+  color: #FD8A7A;   
 }
 
 .Nurie-button-Snowboarding {
-  color: #A5EBFD;   /* 例：スノーボードの青 */
+  color: #A5EBFD;   
 }
 
 .Nurie-button-Family_and_Friends {
@@ -746,13 +746,6 @@ body {
     width: 60px;   /* スマホ用にさらに小さく */
   }
 
-  /* アプリ紹介：縦並びにする */
-  .app-inner {
-    flex-direction: column;
-    gap: 24px;
-    margin: 40px auto;
-  }
-
   .app-icon {
     width: 260px;
   }
@@ -766,7 +759,7 @@ body {
     text-align: center;
   }
 
-  /* MFF テキスト＋スクショの並び → 縦積み */
+  /* MFF テキスト＋スクショの並び  縦積み */
   .The-world-of-MFF {
     flex-direction: column;
     gap: 24px;
@@ -783,7 +776,7 @@ body {
     width: 130px;
   }
 
-  /* Why I built this app セクションも縦積み */
+  /* Why I built this app 縦積み */
   .Why-I-built-this-app {
     flex-direction: column;
     gap: 24px;
@@ -801,17 +794,6 @@ body {
 
   .Romeo-photo {
     padding: 0;
-  }
-
-  /* Values の画像とテキストもスマホでは縦向き＆幅を縮める */
-  .values-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .value-image-wrapper img {
-    width: 260px;
-    height: auto;
   }
 
   /* 塗り絵エリアもスマホ幅に合わせる */
