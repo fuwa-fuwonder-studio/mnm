@@ -262,7 +262,7 @@ body {
 .values-bottom-row {
   display: flex;
   gap: 70px;           /* 左右の間隔 */
-  margin-top: -130px;  /* ここで「かぶせる」量を調整 */
+  margin-top: -120px;  /* ここで「かぶせる」量を調整 */
 }
 
 /* 画像＋テキストを重ねるための共通ラッパー */
