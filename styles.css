@@ -500,12 +500,24 @@ body {
   text-align: left;
 }
 
+.The-world-of-MFF-text h3 {
+  margin-top: 20px;   /* h3 の上の余白 */
+  margin-bottom: 8px; /* h3 の下の余白を短めに */
+}
+
+.The-world-of-MFF-text p {
+  margin-top: 0px;    /* デフォルト margin を消す */
+  margin-bottom: 20px; /* 次の H3 までの間隔 */
+  line-height: 1.6;   /* 行間（文章内の間）を整える */
+}
+
 /* スクリーンショット画像を2枚並列にする */
 .MFF-screenshots {
   display: flex;
   flex-direction: row; 
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 .MFF-screenshots img {
