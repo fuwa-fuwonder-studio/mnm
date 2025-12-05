@@ -294,10 +294,10 @@ body {
 .haorballfriends-hero-inner {
   display: flex;
   margin: 0 auto;  
-  gap: 60px;
-  padding: 40px auto;
+  gap: 40px;
+  padding: 30px auto;
   justify-content: center; 
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   align-items: center;
 }
 
@@ -307,7 +307,7 @@ body {
 }
 
 .hairball-friends-SnuffyandFriends {
-  width: 700px;
+  width: 600px;
   height: auto;
 }
 
