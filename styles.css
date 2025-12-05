@@ -238,79 +238,62 @@ body {
   margin-bottom: 20px;
 }
 
+/* 全体を中央寄せ */
 .values-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: auto auto; 
-  gap: 0px;
-  justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-.value-item:nth-child(1) { margin-top: 0; }
-.value-item:nth-child(2) { margin-top: -150px; }
-.value-item:nth-child(3) { margin-top: -150px; }
-
-/* 1個目だけ中央に配置 */
-.values-grid .value-item:first-child {
-  grid-column: 1 / 3;  /* 2カラム分使う */
-  justify-self: center;
-}
-
-.value-item {
-  text-align: center;
-  position: relative; /* オーバーラップ用 */
-}
-
-.value-item img {
-  width: 300px;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 50px;  /* 少し下げて重ねるニュアンス */
-}
-
-
-.value-item p {
-  margin-top: 0px;
-  max-width: 250px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.value-item {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;              /* 真ん中と下段の間はマージンで調整 */
+  margin: 40px auto 80px;
 }
 
+/* 上の円（中央） */
+.value-item-center {
+  position: relative;
+}
+
+/* 下の２つを横並びにして、上にかぶせる */
+.values-bottom-row {
+  display: flex;
+  gap: 40px;           /* 左右の間隔 */
+  margin-top: -140px;  /* ここで「かぶせる」量を調整 */
+}
+
+/* 画像＋テキストを重ねるための共通ラッパー */
 .value-image-wrapper {
-  position: relative;         /* 子要素の absolute の基準にする */
-  width: 350px;               /* 画像サイズに合わせて調整 */
+  position: relative;
+  width: 360px;        /* 円のサイズに合わせて調整 */
+  height: 360px;
 }
 
 .value-image-wrapper img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
-/* ★ 画像の中央に重ねるテキスト部分 */
-.value-text {
+/* 画像のド真ん中にテキストを配置（共通） */
+.value-text-center,
+.value-text-left,
+.value-text-right {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* 完全ど真ん中に配置 */
+  transform: translate(-50%, -50%);
   text-align: center;
+  padding: 0 40px;     /* 円のフチに文字がくっつかないように余白 */
 }
 
-.value-text h2 {
-  margin: 0;
-  font-size: 20px;
-  font-family: "PaytoneOne";
+/* 細かく位置をずらしたければここで調整 */
+.value-text-left {
+  /* 例：ほんの少し左寄せにしたい時
+     transform: translate(-52%, -50%);
+  */
 }
 
-.value-text p {
-  font-size: 14px;
-  font-family: "Molengo";
-  margin-top: 8px;
+.value-text-right {
+  /* 例：ほんの少し右寄せにしたい時
+     transform: translate(-48%, -50%);
+  */
 }
+
