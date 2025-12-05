@@ -316,8 +316,54 @@ body {
 
 .Muffuffu {
   align-items: center;    
-  justify-content: left;
+  justify-content: center;
 }
 
+.Baffuffu-container {
+  width: 1000;
+  display: flex;
+  gap: 60px;
+  padding: 40px, auto;
+}
 
+.Baffuffu {
+  align-items: center;    
+  justify-content: center;
+}
+
+.Fuffuffu-container {
+  width: 1000;
+  display: flex;
+  gap: 60px;
+  padding: 40px, auto;
+}
+
+.Fuffuffu {
+  align-items: center;    
+  justify-content: center;
+}
+
+.Moffuffu-container {
+  width: 1000;
+  display: flex;
+  gap: 60px;
+  padding: 40px, auto;
+}
+
+.Moffuffu {
+  align-items: center;    
+  justify-content: center;
+}
+
+.Snuffy-container {
+  width: 1000;
+  display: flex;
+  gap: 60px;
+  padding: 40px, auto;
+}
+
+.Snuffy {
+  align-items: center;    
+  justify-content: center;
+}
   
