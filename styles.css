@@ -11,6 +11,21 @@
   font-weight: normal;
   font-style: normal;
 }
+/* ページ全体のフェード用 */
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* 読み込み完了後に付けるクラス → フェードイン */
+body.page-loaded {
+  opacity: 1;
+}
+
+/* ページ遷移前に付けるクラス → フェードアウト */
+body.page-fade-out {
+  opacity: 0;
+}
 
 body {
   margin: 0;
