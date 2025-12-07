@@ -1107,7 +1107,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 190px;
+    margin-top: 220px;
   }
 
   /* 上段／下段どちらも「縦並び＋中央揃え」に変更 */
@@ -1127,7 +1127,7 @@ body {
     text-align: center;
   }
   .Colours-of-This-World p {
-    margin-bottom: 112px;
+    margin-bottom: 120px;
   }
 }
   
