@@ -715,6 +715,83 @@ body {
 /* =========================
    スマホ用レイアウト
    ========================= */
+/*ハンバーガー*/
+/* PCでは非表示 */
+.hamburger,
+.mobile-nav {
+  display: none;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    width: 28px;
+    cursor: pointer;
+    z-index: 2000;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    background: #333;
+    margin: 6px 0;
+    border-radius: 2px;
+  }
+
+  /* PCメニューは非表示 */
+  .main-nav {
+    display: none;
+  }
+
+  /* モバイルメニュー初期状態（画面外） */
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background: #fffdf8;
+    padding: 60px 25px;
+    transition: right 0.3s ease;
+    z-index: 1500;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.08);
+  }
+
+  .mobile-nav.active {
+    right: 0;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-nav li {
+    margin: 20px 0;
+  }
+
+  .mobile-nav a {
+    font-size: 20px;
+    color: #444;
+    text-decoration: none;
+  }
+
+  .mobile-lang {
+    margin-top: 30px;
+    font-size: 18px;
+  }
+
+  .mobile-lang button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+/*スマホ*/
 @media (max-width: 768px) {
 
   body {
@@ -732,6 +809,8 @@ body {
     max-width: 100%;
   }
 
+  
+  
   /* ヒーロー（タイトル＋キャラたち） */
   .hero-inner {
     text-align: center;
