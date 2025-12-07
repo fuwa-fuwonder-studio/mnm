@@ -745,8 +745,8 @@ body {
     border-radius: 2px;
   }
 
-  .mobile-nav a {
-  color: #A37A66;  /* ← 好きな色に変更 */
+  .mobile-nav a.active {
+  color: #A37A66;
 }
   
   /* PCメニューは非表示 */
