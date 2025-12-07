@@ -862,7 +862,7 @@ body {
 
   
   .about-hero-inner {
-    width: 350px;
+    width: 300px;
     margin: 0 auto;
   }
   
@@ -902,6 +902,13 @@ body {
     text-align: center;
     width: 80%;
   }
+  .value-text-center h2 {
+    font-size: 20px;
+  }
+  .value-text-center p {
+    font-size: 14px;
+  }
+  
 
   /* 下２つを横並びにしないための解除 */
   .values-bottom-row {
@@ -914,22 +921,60 @@ body {
 
   /*Hairball friends SP*/
   .hairball-friends-logo {
-  width: 300px;
+  width: 120px;
   margin: 0 auto;
   }
   
   .hairball-friends-SnuffyandFriends {
-    width: 300px;
+    width: 150px;
     margin: 0 auto;
   }
+  .Muffuffu-container,
+  .Baffuffu-container,
+  .Fuffuffu-container,
+  .Moffuffu-container,
+  .Snuffy-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 32px;   /* 下に少し余白 */
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;   /* ← 横→縦 に変更 */
+    gap: 16px;
+    align-items: center;      /* 画像＋テキストを中央寄せ */
+    text-align: center;
+  }
 
-  .charactors-section {
+  /* テキスト側も中央寄せに */
+  .Muffuffu,
+  .Baffuffu,
+  .Fuffuffu,
+  .Moffuffu,
+  .Snuffy {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0;
-    margin-top: 20px;
+    justify-content: center;
+    text-align: center;
   }
+
+  /* 画像サイズも少し小さめにするとき */
+  .Muffuffu-container img,
+  .Baffuffu-container img,
+  .Fuffuffu-container img,
+  .Moffuffu-container img,
+  .Snuffy-container img {
+    width: 180px;
+    height: auto;
+  }
+
+  /* Snuffyの最後の段落も幅をスマホ寄りに */
+  .Snufy-last-paragraph {
+    width: 100%;
+    padding: 0 24px 40px;
+    text-align: center;
+  }
+
 
   /*MFF SP*/
   .mff-appicon {
@@ -945,11 +990,22 @@ body {
   }
 
   .MFF-Thankyou {
-    width: 300px;
+    width: 100%;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;   /* ← 横から縦へ変更 */
+    gap: 20px;
+    align-items: center;      /* 中央寄せ */
+    text-align: center;       /* テキスト中央揃え */
   }
 
   .MFFpage-last-Muffuffu {
-    width: 50px;
+    width: 120px;   /* 画像をスマホ向けに少し大きめに */
+    height: auto;
+  }
+  
+  .mff-header {
+    width: 300px;
   }
 
   /*World SP*/
@@ -996,28 +1052,49 @@ body {
   }
 
   /* 塗り絵エリアもスマホ幅に合わせる */
-  .Nurie {
+ .Nurie {
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     height: auto;
+    padding: 0 16px;
+    box-sizing: border-box;
   }
 
-  .Nurie img,
-  .Nurie div img {
+  .Nurie > img,
+  .Nurie > div img {
     width: 100%;
     height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .Nurie-button-row {
-    display: fles;
+  /* ボタンコンテナを画面幅に合わせて下に配置 */
+  .Nurie-button {
+    width: 100%;
+    margin: 24px auto 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    display: flex;
     flex-direction: column;
-    width: 200px;
-    align-items: center;
-    gap: 6px;
+    gap: 16px;
   }
 
-  .Nurie-button-row h2 {
-    font-size: 10px;
+  /* 上段／下段どちらも「縦並び＋中央揃え」に変更 */
+  .Nurie-button-1,
+  .Nurie-button-2 {
+    display: flex;
+    flex-direction: column;   /* ← 横並び → 縦並び */
+    align-items: center;      /* 中央寄せ */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* ボタンの文字サイズも少しだけ小さく */
+  .Nurie-button-1 h2,
+  .Nurie-button-2 h2 {
+    font-size: 18px;
+    text-align: center;
   }
 }
   
