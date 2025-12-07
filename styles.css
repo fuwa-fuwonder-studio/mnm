@@ -1107,7 +1107,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 240px;
+    margin-top: 265px;
   }
 
   /* 上段／下段どちらも「縦並び＋中央揃え」に変更 */
