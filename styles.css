@@ -721,6 +721,7 @@ body {
 .mobile-nav {
   display: none;
 }
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -734,16 +735,25 @@ body {
 
   .hamburger span {
     display: block;
-    height: 3px;
-    background: #333;
+    height: 2px;
+    background: #A37A66;
     margin: 6px 0;
     border-radius: 2px;
   }
 
+  .mobile-nav a {
+  color: #A37A66;  /* ← 好きな色に変更 */
+}
+  
   /* PCメニューは非表示 */
   .main-nav {
     display: none;
   }
+   /* PC　言語切り替えは非表示 */　
+ .language-switcher{
+    display: none;
+  }
+  
 
   /* モバイルメニュー初期状態（画面外） */
   .mobile-nav {
@@ -753,7 +763,7 @@ body {
     right: -100%;
     width: 70%;
     height: 100%;
-    background: #fffdf8;
+    background: #FFEBD1;
     padding: 60px 25px;
     transition: right 0.3s ease;
     z-index: 1500;
@@ -822,20 +832,141 @@ body {
   }
 
   .hero-character {
-    width: 60px;   /* スマホ用にさらに小さく */
+    width: 70px;   /* スマホ用にさらに小さく */
   }
 
   .app-icon {
-    width: 260px;
+    width: 280px;
   }
 
   .app-title {
     width: 260px;
   }
 
+  .app-store-link {
+    width: 200px;
+  }
+
   .app-content {
     align-items: center;
     text-align: center;
+  }
+
+   .hero-characters {
+    gap: 8px;
+  }
+
+  .Marketing.png {
+    width: 150px;  
+  }
+
+  .Creative.png {
+    width: 150px;  
+  }
+
+  .Branding.png {
+    width: 150px;  
+  }
+
+  .Produce.png {
+    width: 150px;  
+  }
+
+  /*SP about*/
+  .about-hero-inner {
+    width: 600px;
+    margin: 0 auto;
+  }
+  .values-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  /* 画像は全て縦並びに */
+  .value-item-center,
+  .value-item-left,
+  .value-item-right {
+    margin-top: -120px;   /* ← 上の画像とかぶせる */
+  }
+
+  /* 一番上だけは margin をリセットしておく */
+  .value-item-center {
+    margin-top: 0;
+  }
+
+  /* 画像サイズをスマホ用に縮小 */
+  .value-image-wrapper {
+    width: 260px;
+    height: 260px;
+  }
+
+  /* テキストは画像の真ん中にそのまま配置 */
+  .value-text-center,
+  .value-text-left,
+  .value-text-right {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
+  }
+
+  /* 下２つを横並びにしないための解除 */
+  .values-bottom-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 0; /* これがあると歪むのでリセット */
+  }
+
+  /*Hairball friends SP*/
+  .hairball-friends-logo {
+  width: 300px;
+  margin: 0 auto;
+  }
+  
+  .hairball-friends-SnuffyandFriends {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .charactors-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+  /*MFF SP*/
+  .mff-appicon img {
+    width: 280px;
+  }
+
+  .Mff-app-title img {
+    width: 260px;
+  }
+
+  .MFF-app-store-link img {
+    width: 200px;
+  }
+
+  .MFF-Thankyou {
+    width: 600px;
+  }
+
+  .MFFpage-last-Muffuffu img {
+    width: 50px;
+  }
+
+  /*World SP*/
+  .Minami-image img {
+    width: 600px;
+    margin: 0 auto;
   }
 
   /* MFF テキスト＋スクショの並び  縦積み */
@@ -889,12 +1020,14 @@ body {
   }
 
   .Nurie-button-row {
+    display: fles;
     flex-direction: column;
+    align-items: center;
     gap: 8px;
   }
 
   .Nurie-button-row h2 {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
   
