@@ -8,53 +8,51 @@
 </head>
 <body>
   <!-- ========== Header ========== -->
-<header>
-  <div class="header-container">
-    <!-- PC用メニュー -->
-    <nav class="main-nav">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="hairball-friends.html">Hairball Friends</a></li>
-        <li><a href="mff.html">My Furry Friends (iOS App)</a></li>
-        <li><a href="world.html">What makes this World</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- PC版言語切り替え -->
-    <div class="language-switcher">
-      <button data-lang-btn="en">EN</button>
-      <span>·</span>
-      <button data-lang-btn="jp">JP</button>
-    </div>
-  </div>
-
-  <!-- 🌟 スマホ版追加ここから ↓↓↓ -->
-  <div class="hamburger" data-menu-toggle>
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <nav class="mobile-nav" data-mobile-menu>
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="hairball-friends.html">Hairball Friends</a></li>
-      <li><a href="mff.html">My Furry Friends (iOS App)</a></li>
-      <li><a href="world.html">What makes this World</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-
-    <div class="mobile-language">
-      <button data-lang-btn="en">EN</button>
-      <span>·</span>
-      <button data-lang-btn="jp">JP</button>
-    </div>
-  </nav>
-  <!-- 🌟 スマホ版追加ここまで ↑↑↑ -->
-</header>
-
-  
+ <header class="site-header">
+   <!-- スマホ用ハンバーガーアイコン -->
+   <div class="hamburger" data-menu-toggle>
+     <span></span>
+     <span></span>
+     <span></span>
+   </div>
+   <!-- スマホ用ドロワーメニュー -->
+   <nav class="mobile-nav" data-mobile-menu>
+     <ul>
+       <li><a href="about.html">About</a></li>
+       <li><a href="hairball-friends.html">Hairball Friends</a></li>
+       <li><a href="mff.html">My Furry Friends (iOS App)</a></li>
+       <li><a href="world.html">What makes this World</a></li>
+       <li><a href="contact.html">Contact</a></li>
+     </ul>
+     <!-- 言語切り替えもスマホ用に再配置したい場合はここ -->
+     <div class="mobile-lang">
+       <button data-lang-btn="en">EN</button>
+       <span>·</span>
+       <button data-lang-btn="jp">JP</button>
+     </div>
+   </nav>
+   <div class="header-inner">
+     <!-- ロゴ -->
+     <a href="index.html" class="logo">
+       <img src="assets/img/FFS Logo.png" alt="FuwaFuwonder Studio logo">
+     </a>
+     <!-- グローバルナビ -->
+     <nav class="main-nav">
+       <ul>
+         <li><a href="about.html">About</a></li>
+         <li><a href="hairball-friends.html">Hairball Friends</a></li>
+         <li><a href="mff.html">My Furry Friends (iOS App)</a></li>
+         <li><a href="world.html">What makes this World</a></li>
+         <li><a href="contact.html">Contact</a></li>
+       </ul>
+     </nav>
+   </div>
+   <div class="language-switcher">
+     <button data-lang-btn="en">EN</button>
+     <span>·</span>
+     <button data-lang-btn="jp">JP</button>
+   </div>
+ </header>  
 
   <!-- ========== Hero Section ========== -->
   <main>
