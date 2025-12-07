@@ -46,7 +46,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ④ 塗り絵の処理 
+  // ④ ハンバーガーメニュー開閉
+  const menuToggle = document.querySelector("[data-menu-toggle]");
+  const mobileMenu = document.querySelector("[data-mobile-menu]");
+
+  if (menuToggle && mobileMenu) {
+    // アイコンタップでメニューの表示 / 非表示を切り替え
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
+
+    // モバイルメニュー内のリンクをクリックしたらメニューを閉じる（任意）
+    mobileMenu.querySelectorAll("a[href]").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+      });
+    });
+  }
+
+  // ⑤ 塗り絵の処理 
   const nurie = document.querySelector(".Nurie");
   if (nurie) {
     const mapping = {
