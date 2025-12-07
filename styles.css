@@ -331,6 +331,10 @@ body {
   height: auto;
 }
 
+.charactors-section img {
+  width: 220px;
+}
+
 .Muffuffu-container {
   width: 1000px;  
   margin: 0 auto;  
