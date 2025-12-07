@@ -912,19 +912,19 @@ body {
     font-size: 20px;
   }
   .value-text-center p {
-    font-size: 14px;
+    font-size: 12px;
   }
    .value-text-left h2 {
     font-size: 20px;
   }
   .value-text-leftp {
-    font-size: 14px;
+    font-size: 12px;
   }
    .value-text-right h2 {
     font-size: 20px;
   }
   .value-text-right p {
-    font-size: 14px;
+    font-size: 12px;
   }
   
 
@@ -1099,7 +1099,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 180px;
+    margin-top: 175px;
   }
 
   /* 上段／下段どちらも「縦並び＋中央揃え」に変更 */
@@ -1117,6 +1117,9 @@ body {
   .Nurie-button-2 h2 {
     font-size: 18px;
     text-align: center;
+  }
+  .Colours-of-This-World p {
+    margin-bottom: 100px;
   }
 }
   
