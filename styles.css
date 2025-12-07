@@ -1022,8 +1022,9 @@ body {
   .Nurie-button-row {
     display: fles;
     flex-direction: column;
+    width: 200px;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
   }
 
   .Nurie-button-row h2 {
