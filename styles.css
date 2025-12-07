@@ -753,7 +753,9 @@ body {
  .language-switcher {
     display: none;
   }
-  
+  .language-switcher button {
+    display: none;
+  }
 
   /* モバイルメニュー初期状態（画面外） */
   .mobile-nav {
@@ -824,7 +826,7 @@ body {
   /* ヒーロー（タイトル＋キャラたち） */
   .hero-inner {
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .hero-characters {
@@ -860,6 +862,10 @@ body {
     width: 65px;
   }
 
+  .work-grid {
+    width: 280px;
+  }
+
   
   .about-hero-inner {
     width: 300px;
@@ -878,7 +884,7 @@ body {
   .value-item-center,
   .value-item-left,
   .value-item-right {
-    margin-top: -50px;   /* ← 上の画像とかぶせる */
+    margin-top: -30px;   /* ← 上の画像とかぶせる */
   }
 
   /* 一番上だけは margin をリセットしておく */
@@ -908,6 +914,18 @@ body {
   .value-text-center p {
     font-size: 14px;
   }
+   .value-text-left h2 {
+    font-size: 20px;
+  }
+  .value-text-leftp {
+    font-size: 14px;
+  }
+   .value-text-right h2 {
+    font-size: 20px;
+  }
+  .value-text-right p {
+    font-size: 14px;
+  }
   
 
   /* 下２つを横並びにしないための解除 */
@@ -924,6 +942,9 @@ body {
   width: 120px;
   margin: 0 auto;
   }
+  .haorballfriends-hero-inner {
+    gap: 10px;
+  }
   
   .hairball-friends-SnuffyandFriends {
     width: 150px;
@@ -936,7 +957,7 @@ body {
   .Snuffy-container {
     width: 100%;
     max-width: 100%;
-    margin: 0 auto 32px;   /* 下に少し余白 */
+    margin: 0 auto 25px;   /* 下に少し余白 */
     padding: 16px 24px;
     display: flex;
     flex-direction: column;   /* ← 横→縦 に変更 */
@@ -1078,6 +1099,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 180px;
   }
 
   /* 上段／下段どちらも「縦並び＋中央揃え」に変更 */
