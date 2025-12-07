@@ -756,6 +756,10 @@ body {
   .language-switcher button {
     display: none;
   }
+  .language-switcher span {
+    display: none;
+  }
+  
 
   /* モバイルメニュー初期状態（画面外） */
   .mobile-nav {
@@ -862,7 +866,7 @@ body {
     width: 65px;
   }
 
-  .work-grid {
+  .works-grid {
     width: 280px;
   }
 
@@ -917,7 +921,7 @@ body {
    .value-text-left h2 {
     font-size: 20px;
   }
-  .value-text-leftp {
+  .value-text-left p {
     font-size: 12px;
   }
    .value-text-right h2 {
@@ -943,7 +947,7 @@ body {
   margin: 0 auto;
   }
   .haorballfriends-hero-inner {
-    gap: 10px;
+    gap: 2px;
   }
   
   .hairball-friends-SnuffyandFriends {
@@ -1099,7 +1103,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    margin-top: 175px;
+    margin-top: 190px;
   }
 
   /* 上段／下段どちらも「縦並び＋中央揃え」に変更 */
@@ -1119,7 +1123,7 @@ body {
     text-align: center;
   }
   .Colours-of-This-World p {
-    margin-bottom: 100px;
+    margin-bottom: 112px;
   }
 }
   
