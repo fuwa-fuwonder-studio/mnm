@@ -836,15 +836,15 @@ body {
   }
 
   .app-icon {
-    width: 280px;
+    width: 150px;
   }
 
   .app-title {
-    width: 260px;
+    width: 150px;
   }
 
   .app-store-link {
-    width: 200px;
+    width: 120px;
   }
 
   .app-content {
@@ -857,24 +857,24 @@ body {
   }
 
   .Marketing.png {
-    width: 150px;  
+    width: 65px;  
   }
 
   .Creative.png {
-    width: 150px;  
+    width: 65px;  
   }
 
   .Branding.png {
-    width: 150px;  
+    width: 65px;  
   }
 
   .Produce.png {
-    width: 150px;  
+    width: 65px;  
   }
 
   /*SP about*/
   .about-hero-inner {
-    width: 600px;
+    width: 350px;
     margin: 0 auto;
   }
   .values-grid {
@@ -889,7 +889,7 @@ body {
   .value-item-center,
   .value-item-left,
   .value-item-right {
-    margin-top: -120px;   /* ← 上の画像とかぶせる */
+    margin-top: -50px;   /* ← 上の画像とかぶせる */
   }
 
   /* 一番上だけは margin をリセットしておく */
@@ -943,29 +943,29 @@ body {
   }
 
   /*MFF SP*/
-  .mff-appicon img {
-    width: 280px;
+  .mff-appicon {
+    width: 130px;
   }
 
-  .Mff-app-title img {
-    width: 260px;
+  .Mff-app-title {
+    width: 130px;
   }
 
-  .MFF-app-store-link img {
-    width: 200px;
+  .MFF-app-store-link {
+    width: 110px;
   }
 
   .MFF-Thankyou {
-    width: 600px;
+    width: 300px;
   }
 
-  .MFFpage-last-Muffuffu img {
+  .MFFpage-last-Muffuffu {
     width: 50px;
   }
 
   /*World SP*/
-  .Minami-image img {
-    width: 600px;
+  .Minami-image {
+    width: 250px;
     margin: 0 auto;
   }
 
@@ -1009,7 +1009,7 @@ body {
   /* 塗り絵エリアもスマホ幅に合わせる */
   .Nurie {
     width: 100%;
-    max-width: 360px;
+    max-width: 300px;
     height: auto;
   }
 
