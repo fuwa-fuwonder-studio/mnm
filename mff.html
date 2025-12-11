@@ -8,7 +8,7 @@
 </head>
 <body>
   <!-- ========== Header ========== -->
- <header class="site-header">
+  <header class="site-header">
    <!-- スマホ用ハンバーガーアイコン -->
    <div class="hamburger" data-menu-toggle>
      <span></span>
@@ -41,7 +41,16 @@
        <ul>
          <li><a href="about.html">About</a></li>
          <li><a href="hairball-friends.html">Hairball Friends</a></li>
-         <li><a href="mff.html">My Furry Friends (iOS App)</a></li>
+         <!-- ▼ ドロップダウンメニュー -->
+         <li class="has-dropdown">
+           <a href="mff.html">My Furry Friends (iOS App)</a>
+           <ul class="dropdown-menu">
+             <li><a href="mff.html">About the app</a></li>
+             <li><a href="FAQ.html">Help & Support</a></li>
+             <li><a href="privacypolicy.html">Privacy Policy</a></li>
+           </ul>
+         </li>
+         <!-- ▲ ドロップダウンメニュー -->
          <li><a href="world.html">What makes this World</a></li>
          <li><a href="contact.html">Contact</a></li>
        </ul>
