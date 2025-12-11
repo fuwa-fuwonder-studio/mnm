@@ -756,6 +756,38 @@ body {
   margin-bottom: 20px;
 }
 
+/*FAQ and Privacy Policy*/
+.mff-privacypolicy h1,
+.mff-helpandsupport h1 {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  fontsize: 30px;
+}
+
+.mff-helpandsupport,
+.mff-privacypolicy {
+  width: 900px;
+  margin: 0 auto; 
+  display: flex;
+  padding: 0px 0;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  text-align: left;
+}
+
+.mff-helpandsupport h2,
+.mff-helpandsupport h2 {
+  margin-top: 35px;  
+  margin-bottom: 5px; 
+}
+
+.mff-helpandsupport h4,
+.mff-helpandsupport h4 {
+  margin-top: 7px;  
+  margin-bottom: 5px; 
+}
+
 /* スマホ */
 /* =========================
    スマホ用レイアウト
@@ -1170,39 +1202,18 @@ body {
   .Colours-of-This-World p {
     margin-bottom: 140px;
   }
+
+  /*FAQ and Privacy*/
+  .mff-helpandsupport,
+  .mff-privacypolicy {
+    width: 100%;
+    max-width: 100%;
+    padding:0 15px;
+  }
+  
 }
   
 
-/*FAQ and Privacy Policy*/
-.mff-privacypolicy h1,
-.mff-helpandsupport h1 {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  fontsize: 30px;
-}
 
-.mff-helpandsupport,
-.mff-privacypolicy {
-  width: 900px;
-  margin: 0 auto; 
-  display: flex;
-  padding: 0px 0;
-  flex-direction: column;
-  align-items: flex-start; 
-  justify-content: center;
-  text-align: left;
-}
-
-.mff-helpandsupport h2,
-.mff-helpandsupport h2 {
-  margin-top: 35px;  
-  margin-bottom: 5px; 
-}
-
-.mff-helpandsupport h4,
-.mff-helpandsupport h4 {
-  margin-top: 7px;  
-  margin-bottom: 5px; 
-}
 
 
