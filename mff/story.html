@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FuwaFuwonder Studio</title>
+
+  <!-- 1つ上の階層にある styles.css を読み込む -->
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <!-- ========== Header ========== -->
+  <header class="site-header">
+   <!-- スマホ用ハンバーガーアイコン -->
+   <div class="hamburger" data-menu-toggle>
+     <span></span>
+     <span></span>
+     <span></span>
+   </div>
+   <!-- スマホ用ドロワーメニュー -->
+   <nav class="mobile-nav" data-mobile-menu>
+     <ul>
+       <li><a href="../about.html">About</a></li>
+       <li><a href="../hairball-friends.html">Hairball Friends</a></li>
+       <li><a href="../mff.html">My Furry Friends (iOS App)</a></li>
+       <li><a href="../world.html">What makes this World</a></li>
+       <li><a href="mailto:2pmagreement0211@gmail.com">Contact</a></li>
+     </ul>
+     <!-- 言語切り替えもスマホ用に再配置したい場合はここ -->
+     <div class="mobile-lang">
+       <button data-lang-btn="en">EN</button>
+       <span>·</span>
+       <button data-lang-btn="jp">JP</button>
+     </div>
+   </nav>
+   <div class="header-inner">
+     <!-- ロゴ -->
+     <a href="../index.html" class="logo">
+       <img src="../assets/img/FFS Logo.png" alt="FuwaFuwonder Studio logo">
+     </a>
+     <!-- グローバルナビ -->
+     <nav class="main-nav">
+       <ul>
+         <li><a href="../about.html">About</a></li>
+         <li><a href="../hairball-friends.html">Hairball Friends</a></li>
+         <!-- ▼ ドロップダウンメニュー -->
+         <li class="has-dropdown">
+           <a href="../mff.html">My Furry Friends (iOS App)</a>
+           <ul class="dropdown-menu">
+             <li><a href="../mff.html">About the app</a></li>
+             <li><a href="FAQ.html">Help & Support</a></li>
+             <li><a href="privacypolicy.html">Privacy Policy</a></li>
+           </ul>
+         </li>
+         <!-- ▲ ドロップダウンメニュー -->
+         <li><a href="../world.html">What makes this World</a></li>
+         <li><a href="mailto:2pmagreement0211@gmail.com">Contact</a></li>
+       </ul>
+     </nav>
+   </div>
+   <div class="language-switcher">
+     <button data-lang-btn="en">EN</button>
+     <span>·</span>
+     <button data-lang-btn="jp">JP</button>
+   </div>
+ </header>  
+  <!-- FAQ -->
+ <main>
+   <div class="mff-helpandsupport">
+     <h1>
+        <span data-lang="en">Help & Support</span>
+        <span data-lang="jp">サポート情報</span>
+     </h1>
+     <p>
+        <span data-lang="en">Thank you for using My Furry Friends.<br>Here you will find support information, FAQs, and how to contact the developer.</span>
+        <span data-lang="jp">My Furry Friends をご利用いただきありがとうございます。<br>このページでは、アプリに関するサポート情報・よくある質問・お問い合わせ方法をご案内します。</span>
+     </p>
+     <h2>
+       <span data-lang="en">About the App</span>
+       <span data-lang="jp">アプリについて</span>
+     </h2>
+     <p>
+       <span data-lang="en">My Furry Friends is a gentle and cozy photo app designed to capture and organize your Furry Friend’s precious moments.<br>• Simple photo capture<br>• Automatic timeline organization<br>• Optional Friend Mode to view others’ Furry Friends<br>• Secure QR code backup & restore<br>• No account registration is required.<br>Your data remains on your device unless you choose to share through the optional friend feature.</span>
+       <span data-lang="jp">My Furry Friends は、あなたの大切な “Furry Friend（ふわふわの家族）” の写真や思い出をやさしい世界観で記録できるアプリです。<br>・シンプルな操作で撮影<br>・自動でタイムライン整理<br>・友だちの Furry Friend も閲覧可能（任意機能）<br>・QRコードで簡単バックアップ＆復元<br>アカウント登録は不要で、データは基本的にあなたのデバイス内に保存されます。</span>
+     </p>
+     <h2>
+       <span data-lang="en">If Something Seems Wrong</span>
+       <span data-lang="jp">不具合かな？と思ったとき</span>
+     </h2>
+     <p>
+       <span data-lang="en">Please try the following:<br>1. Restart the app<br>2. Restart your device<br>3. Check your internet connection (for friend features)<br>4. Update to the latest version<br>5. Ensure camera & photo permissions are enabled (Settings → My Furry Friends → Allow Camera & Photos)<br>If the issue continues, feel free to contact us.</span>
+       <span data-lang="jp">以下をお試しください：<br>1. アプリを再起動する<br>2. デバイスを再起動する<br>3. インターネット接続を確認（友だち機能を使う場合）<br>4. 最新バージョンにアップデート<br>5. カメラ・写真へのアクセス権限を確認 (設定 → My Furry Friends → カメラ / 写真を許可)<br>それでも改善しない場合は、お気軽にご連絡ください。</span>
+     <h2>
+       <span data-lang="en">FAQ</span>
+       <span data-lang="jp">よくある質問</span>
+     </h2>
+     <h4>
+       <span data-lang="en">Q. Where is my data stored?</span>
+       <span data-lang="jp">Q. データはどこに保存されていますか？</span>
+     </h4>
+     <p>
+       <span data-lang="en">Your photos and profile are stored locally on your device.<br>Only minimal data used for the optional friend feature is stored securely in the cloud.</span>
+       <span data-lang="jp">写真やプロフィールは端末に保存されます。<br>友だち機能（任意）を利用した場合のみ、必要な範囲のデータが安全にクラウドへ保存されます。</span>
+     </p>
+     <h4>
+       <span data-lang="en">Q. Can I restore my data with a QR code?</span>
+       <span data-lang="jp">Q. QRコードで復元できますか？</span>
+     </h4>
+     <p>
+       <span data-lang="en">Yes. Save your recovery QR code and you can restore your profile when switching devices.</span>
+       <span data-lang="jp">はい。プロフィール画面で復元用QRコードを保存しておくことで、機種変更の際に復元できます。</span>
+     </p>
+     <h4>
+       <span data-lang="en">Q. How do I view my friend’s Furry Friend?</span>
+       <span data-lang="jp">Q. 友だちのFurry Friendを見るには？</span>
+     </h4>
+     <p>
+       <span data-lang="en">Scan their Friend Code and you can browse their Furry Friend’s timeline. There is no chat or messaging feature.</span>
+       <span data-lang="jp">相手の「Friend Code」を読み取るだけで閲覧できます。チャット機能などは一切ありません。</span>
+     </p>
+     <h4>
+       <span data-lang="en">Q. Are there ads or paid features?</span>
+       <span data-lang="jp">Q. 広告や課金はありますか？</span>
+     </h4>
+     <p>
+       <span data-lang="en">No. The app is completely free.</span>
+       <span data-lang="jp">ありません。完全無料で利用できます。</span>
+     </p>
+     <h4>
+       <span data-lang="en">Q. Camera doesn't work / Screen id dark</span>
+       <span data-lang="jp">Q. カメラが動かない / 画面が真っ暗になる</span>
+     </h4>
+     <p>
+       <span data-lang="en">Please check the permission in Settings → Privacy & Security → Camera.<br>If access is disabled, enable it and restart the app.</span>
+       <span data-lang="jp">「設定 → プライバシーとセキュリティ → カメラ」からMy Furry Friends のカメラアクセスが 許可されているか ご確認ください。<br>アクセスがオフになっている場合はオンにして、アプリを再起動してください。</span>
+     </p>
+     <h4>
+       <span data-lang="en">Q. Daily notification doesn’t appear</span>
+       <span data-lang="jp">Q. 毎日の通知が届かない</span>
+     </h4>
+     <p>
+       <span data-lang="en">Please check Settings → Notifications → My Furry Friends. Make sure “Allow Notifications” is enabled</span>
+       <span data-lang="jp">「設定 → 通知 → My Furry Friends」から“通知を許可” がオン になっているかご確認ください。</span>
+     </p>
+     <h4>
+       <span data-lang="en">Q. Where are my photos stored?</span>
+       <span data-lang="jp">Q. 写真はどこに保存されていますか？</span>
+     </h4>
+     <p>
+       <span data-lang="en">Your photos are saved inside the app’s album and are not automatically stored in your device’s default Photos app.<br>If you want to save a photo to your device, open it in full-screen view and tap the Save icon in the top-right corner.</span>
+       <span data-lang="jp">撮影した写真はアプリ内のアルバムに保存されます。端末の標準写真アプリには自動では保存されません。<br>保存したい場合は、写真を全画面表示した際に、右上の保存アイコンから保存できます。</span>
+     </p>
+     <h2>
+       <span data-lang="en">Contact Form</span>
+       <span data-lang="jp">4. データの安全管理</span>
+     </h2>
+     <p>
+       <span data-lang="en">If you would like to contact us, please send us an email from <a href="mailto:2pmagreement0211@gmail.com">here</a></span>
+       <span data-lang="jp">ご質問・不具合・フィードバックがありましたら、<a href="mailto:2pmagreement0211@gmail.com">こちら</a>からご連絡ください</span>
+     </p>
+     <h2>
+       <span data-lang="en">Thank you!</span>
+       <span data-lang="jp">本アプリをご利用いただき、ありがとうございます</span>
+     </h2>
+     <p>
+       <span data-lang="en">Thank you so much for supporting My Furry Friends.<br>We hope this app helps you cherish every moment with your beloved Furry Friend.</span>
+       <span data-lang="jp">My Furry Friends をご利用いただき本当にありがとうございます。<br>あなたの Furry Friend の思い出が、もっと楽しく・もっと優しく残せるアプリを目指しています。</span>
+     </p>
+     <p>
+       <span data-lang="en">※Muffuffu, the mascot character of My Furry Friends, is an original illustration created specifically for this app.</span>
+       <span data-lang="jp">※Muffuffu（むっふっふ）は「My Furry Friends」専用に制作されたオリジナルキャラクターです。</span>
+     </p>
+     
+       <!-- ========== Footer ========== -->
+  <footer class="site-footer">
+    <small>© FuwaFuwonder Studio. All colours, cats, and hairballs reserved.</small>
+  </footer>
+
+  <!-- 1つ上の階層にある script.js を読み込む -->
+  <script src="../script.js"></script>
+</body>
+</html>
