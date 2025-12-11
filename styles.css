@@ -83,6 +83,41 @@ img {
   padding: 0;
 }
 
+/* ドロップダウン初期状態：非表示 */
+.main-nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* 親 li の位置を基準にする */
+.main-nav .has-dropdown {
+  position: relative;
+}
+
+/* ホバーで表示 */
+.main-nav .has-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* 中のリンクを綺麗に */
+.main-nav .dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  white-space: nowrap;
+  font-size: 14px;
+  color: #333;
+}
+
+.main-nav .dropdown-menu li a:hover {
+  background-color: #f5f5f5;
+}
+
 /* ナビのリンクの見た目 */
 .main-nav a {
   text-decoration: none;
