@@ -1173,6 +1173,31 @@ body {
 }
   
 
+/*FAQ and Privacy Policy*/
+.mff-privacypolicy h1,
+.mff-helpandsupport h1 {
+  margin-top: 100px;
+  margin-bottom: 60px;
+  fontsize: 22px;
+}
+
+.mff-helpandsupport,
+.mff-privacypolicy {
+  width: 900px;
+  margin: 0 auto; 
+  display: flex;
+  padding: 0px 0;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  text-align: left;
+}
+
+.mff-helpandsupport h2,
+.mff-helpandsupport h2 {
+  margin-top: 20px;  
+  margin-bottom: 8px; 
+}
 
 
 
