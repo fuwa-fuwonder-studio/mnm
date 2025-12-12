@@ -838,8 +838,8 @@ body.story-page {
 /* アイコン＋ストアロゴのコンテナ（タイトルの真下あたり） */
 .mfflp-hero-app {
   position: absolute;
-  right: 12%;       /* タイトルと右端をそろえる */
-  top: 43%;        /* タイトルの下に来るように調整 */
+  right: 20%;       /* タイトルと右端をそろえる */
+  top: 45%;        /* タイトルの下に来るように調整 */
   display: flex;
   align-items: center;  /* アイコンとロゴの“縦の中心”を揃える */
   gap: 16px;            /* アイコンとロゴの間隔 */
