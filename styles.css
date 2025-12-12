@@ -875,15 +875,6 @@ body.story-page {
   margin-bottom: 50px;
 }
 
-. mfflp-bullets p {
-  width: 900px;
-  margin: 0 auto; 
-  padding: 0px 0;
-  align-items: flex-start; 
-  justify-content: center;
-  text-align: left;
-}
-
 .mfflp-perfectfor {
   width: 1000px;  
   margin: 0 auto;  
@@ -898,7 +889,7 @@ body.story-page {
 .mfflp-perfectfor-text {
   display: flex;
   flex-direction: column;
-  gap: 0px;
+  gap: 3px;
   align-items: flex-start; 
   justify-content: center;
   text-align:　left;
