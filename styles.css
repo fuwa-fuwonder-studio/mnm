@@ -792,10 +792,17 @@ body {
 
 /* story.html だけ背景模様を表示する */
 body.story-page {
+  body.story-page {
   background:
-    url("assets/img/paw.png") repeat-y left top,
-    url("assets/img/paw.png") repeat-y right top;
-  background-size: 150px auto;
+    /* 左側 2 列 */
+    url("assets/img/paw.png") repeat-y left 20px,
+    url("assets/img/paw.png") repeat-y left 90px,
+
+    /* 右側 2 列 */
+    url("assets/img/paw.png") repeat-y right 20px,
+    url("assets/img/paw.png") repeat-y right 90px;
+
+  background-size: 50px auto;
   background-color: #FFEBD1;
 }
 
