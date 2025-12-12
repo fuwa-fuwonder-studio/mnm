@@ -798,6 +798,61 @@ body {
   background-size: 30px auto;
 }
 
+/* ヒーロー全体の器 */
+.mfflp-hero {
+  width: 100%;
+}
+
+/* 中身を中央寄せ＋相対位置の基準にする */
+.mfflp-hero-inner {
+  position: relative;
+  max-width: 1200px;   /* 必要に応じて調整 */
+  margin: 0 auto;
+}
+
+/* 背景画像：横幅いっぱい、高さはauto */
+.mfflp-hero-bg-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* タイトル画像：背景の上に重ねて右上寄せ */
+.mfflp-hero-title-img {
+  position: absolute;
+  top: 12%;        /* ここは好みで微調整 */
+  right: 8%;       /* 同じく微調整ポイント */
+  width: 340px;    /* 大きさも好みで調整 */
+  height: auto;
+  z-index: 2;
+}
+
+/* アイコン＋ストアロゴのコンテナ（タイトルの真下あたり） */
+.mfflp-hero-app {
+  position: absolute;
+  right: 8%;       /* タイトルと右端をそろえる */
+  top: 45%;        /* タイトルの下に来るように調整 */
+  display: flex;
+  align-items: center;  /* アイコンとロゴの“縦の中心”を揃える */
+  gap: 16px;            /* アイコンとロゴの間隔 */
+  z-index: 2;
+}
+
+/* アプリアイコン */
+.mfflp-hero-icon {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+
+/* App Store ロゴ */
+.mfflp-hero-store-link img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+
 /* スマホ */
 /* =========================
    スマホ用レイアウト
@@ -1225,6 +1280,19 @@ body {
   /*Background*/
    .story-page {
     background: none;
+  }
+  /*重ね解除*/
+  .mfflp-hero-title-img,
+  .mfflp-hero-app {
+    position: static;      /* 重ねるのをやめてフローに戻す */
+    margin: 16px auto 0;
+    display: block;
+    text-align: center;
+  }
+
+  .mfflp-hero-app {
+    display: flex;
+    justify-content: center;
   }
 }
   
