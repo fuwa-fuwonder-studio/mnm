@@ -821,9 +821,9 @@ body {
 /* タイトル画像：背景の上に重ねて右上寄せ */
 .mfflp-hero-title-img {
   position: absolute;
-  top: 12%;        /* ここは好みで微調整 */
-  right: 8%;       /* 同じく微調整ポイント */
-  width: 400px;    /* 大きさも好みで調整 */
+  top: 10%;        /* ここは好みで微調整 */
+  right: 5%;       /* 同じく微調整ポイント */
+  width: 500px;    /* 大きさも好みで調整 */
   height: auto;
   z-index: 2;
 }
@@ -831,8 +831,8 @@ body {
 /* アイコン＋ストアロゴのコンテナ（タイトルの真下あたり） */
 .mfflp-hero-app {
   position: absolute;
-  right: 8%;       /* タイトルと右端をそろえる */
-  top: 45%;        /* タイトルの下に来るように調整 */
+  right: 5%;       /* タイトルと右端をそろえる */
+  top: 40%;        /* タイトルの下に来るように調整 */
   display: flex;
   align-items: center;  /* アイコンとロゴの“縦の中心”を揃える */
   gap: 16px;            /* アイコンとロゴの間隔 */
@@ -841,7 +841,7 @@ body {
 
 /* アプリアイコン */
 .mfflp-hero-icon {
-  width: 140px;
+  width: 130px;
   height: auto;
   display: block;
 }
