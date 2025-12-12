@@ -795,7 +795,8 @@ body {
   background:
     url("../assets/img/paw.png") repeat-y left top,
     url("../assets/img/paw.png") repeat-y right top;
-  background-size: 30px auto;
+  background-size: 200px auto;
+  background: #FFEBD1;
 }
 
 /* ヒーロー全体の器 */
