@@ -1365,8 +1365,9 @@ body.story-page {
   /* MFF LP*/
   /*Background*/
    body.story-page {
-    background: none;
-  }
+  background:none;
+  background-color: #FFEBD1;
+}
   /*重ね解除*/
   .mfflp-hero-app {
     position: static;      /* 重ねるのをやめてフローに戻す */
@@ -1386,15 +1387,20 @@ body.story-page {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    margin-top: 0; /* これがあると歪むのでリセット */
+    margin-top: 0;
+    width: 380px; /* これがあると歪むのでリセット */
   }
+  
   .mfflp-hero-title-img {
     position: absolute;
-    top: 3%;        /* ここは好みで微調整 */
-    right: 50%;       /* 同じく微調整ポイント */
-    width: 150px;    /* 大きさも好みで調整 */
+    top: 2%;        /* ここは好みで微調整 */
+    margin: 0 auto;    /* 同じく微調整ポイント */
+    width: 250px;    /* 大きさも好みで調整 */
     height: auto;
-    z-index: 2;
+  }
+  .mfflp-muffuffu-image img {
+    width: 150px;
+    height: auto;
   }
   
 }
