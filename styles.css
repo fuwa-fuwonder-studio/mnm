@@ -823,7 +823,7 @@ body {
   position: absolute;
   top: 12%;        /* ここは好みで微調整 */
   right: 8%;       /* 同じく微調整ポイント */
-  width: 340px;    /* 大きさも好みで調整 */
+  width: 400px;    /* 大きさも好みで調整 */
   height: auto;
   z-index: 2;
 }
@@ -841,14 +841,14 @@ body {
 
 /* アプリアイコン */
 .mfflp-hero-icon {
-  width: 120px;
+  width: 140px;
   height: auto;
   display: block;
 }
 
 /* App Store ロゴ */
 .mfflp-hero-store-link img {
-  width: 180px;
+  width: 150px;
   height: auto;
   display: block;
 }
