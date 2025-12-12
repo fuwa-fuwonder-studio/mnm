@@ -1037,7 +1037,7 @@ body.story-page {
 @media (max-width: 768px) {
 
   body {
-    padding: 0 10px;
+    padding: 0 50px;
   }
 
   /* 全体の横幅を画面にフィットさせる */
@@ -1395,13 +1395,21 @@ body.story-page {
     position: absolute;
     top: 2%;        /* ここは好みで微調整 */
     margin: 0 auto;    /* 同じく微調整ポイント */
-    width: 250px;    /* 大きさも好みで調整 */
+    width: 200px;    /* 大きさも好みで調整 */
     height: auto;
   }
   .mfflp-muffuffu-image img {
     width: 150px;
     height: auto;
   }
+  .mfflp-features h2,
+  .mfflp-features p {
+    width: 350px;
+  }
+  .mfflp-values p {
+    width: 350px;
+  }
+  
   
 }
   
