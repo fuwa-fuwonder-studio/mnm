@@ -795,10 +795,10 @@ body.story-page {
   background:
     /* 左側 2 列 */
     url("assets/img/paw.png") repeat-y left 20px,
-    url("assets/img/paw.png") repeat-y left 90px,
+    url("assets/img/paw.png") repeat-y left 200px,
     /* 右側 2 列 */
     url("assets/img/paw.png") repeat-y right 20px,
-    url("assets/img/paw.png") repeat-y right 90px;
+    url("assets/img/paw.png") repeat-y right 200px;
   background-size: 50px auto;
   background-color: #FFEBD1;
 }
