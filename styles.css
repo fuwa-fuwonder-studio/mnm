@@ -1037,7 +1037,7 @@ body.story-page {
 @media (max-width: 768px) {
 
   body {
-    padding: 0 50px;
+    padding: 0 30px;
   }
 
   /* 全体の横幅を画面にフィットさせる */
@@ -1403,10 +1403,15 @@ body.story-page {
     height: auto;
   }
   .mfflp-features h2,
+  .mfflp-features h3,
   .mfflp-features p {
     width: 350px;
   }
   .mfflp-values p {
+    width: 350px;
+  }
+  .mfflp-values,
+  .mfflp-features {
     width: 350px;
   }
   
