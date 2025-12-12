@@ -1046,7 +1046,9 @@ body.story-page {
   .Why-I-built-this-app,
   .How-it-was-made,
   .values-grid,
-  .Moffuffu-container {
+  .Moffuffu-container 
+  .mfflp-features 
+  .mfflp-perfectfor {
     width: 100%;
     max-width: 100%;
   }
@@ -1362,11 +1364,10 @@ body.story-page {
 
   /* MFF LP*/
   /*Background*/
-   .story-page {
+   body.story-page {
     background: none;
   }
   /*重ね解除*/
-  .mfflp-hero-title-img,
   .mfflp-hero-app {
     position: static;      /* 重ねるのをやめてフローに戻す */
     margin: 16px auto 0;
@@ -1378,6 +1379,28 @@ body.story-page {
     display: flex;
     justify-content: center;
   }
+  
+  .mfflp-keyfeatures,
+  .mfflp-perfectfor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin-top: 0; /* これがあると歪むのでリセット */
+  }
+  .mfflp-hero-title-img {
+    position: absolute;
+    top: 3%;        /* ここは好みで微調整 */
+    right: 50%;       /* 同じく微調整ポイント */
+    width: 150px;    /* 大きさも好みで調整 */
+    height: auto;
+    z-index: 2;
+  }
+  .mfflp-features {
+    
+
+
+  
 }
   
 
