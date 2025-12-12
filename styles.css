@@ -1414,6 +1414,14 @@ body.story-page {
   .mfflp-features {
     width: 350px;
   }
+
+  .mfflp-features h2 {
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  .mfflp-keyfeatures {
+    padding: 15px 0;
+  }
   
   
 }
