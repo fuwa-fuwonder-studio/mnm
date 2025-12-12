@@ -887,7 +887,7 @@ body.story-page {
   width: 1000px;  
   margin: 0 auto;  
   display: flex;
-  gap: 100px;
+  gap: 80px;
   padding: 20px 0;
   justify-content: center;
   align-items: center;     
@@ -897,6 +897,7 @@ body.story-page {
 .mfflp-perfectfor-text {
   display: flex;
   flex-direction: column;
+  gap: 30px;
   align-items: flex-start; 
   justify-content: center;
   text-align:　left;
@@ -932,14 +933,15 @@ body.story-page {
 
 .mfflp-values p { 
   margin: 0 auto;  
-  margin-top: 30px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .snuffyandmuffuffu-image {
-  width: 350px;
+  width: 300px;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto;+
+  margin-top: 40px;
 }
 
 
