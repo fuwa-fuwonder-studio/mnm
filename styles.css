@@ -884,7 +884,7 @@ body.story-page {
 }
 
 .mfflp-perfectfor {
-  width: 900px;  
+  width: 1000px;  
   margin: 0 auto;  
   display: flex;
   gap: 100px;
@@ -903,7 +903,7 @@ body.story-page {
 }
 
 .mfflp-snuffy-sleeping img {
-  width: 400px;
+  width: 350px;
 }
 
 .mfflp-keyfeatures {
