@@ -793,13 +793,9 @@ body {
 /* story.html だけ背景模様を表示する */
 body.story-page {
   background:
-    /* 左側 2 列 */
-    url("assets/img/paw.png") repeat-y left 20px,
-    url("assets/img/paw.png") repeat-y left 200px,
-    /* 右側 2 列 */
-    url("assets/img/paw.png") repeat-y right 20px,
-    url("assets/img/paw.png") repeat-y right 200px;
-  background-size: 50px auto;
+    url("assets/img/paw.png") repeat-y left top,
+    url("assets/img/paw.png") repeat-y right top;
+  background-size: 400px auto;
   background-color: #FFEBD1;
 }
 
