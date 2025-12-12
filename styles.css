@@ -857,12 +857,11 @@ body.story-page {
   width: 900px;
   height: auto;
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 15px 0;
 }
 
 .mfflp-muffuffu-image img {
-  width: 200px;
-  margin-bottom: 50px;
+  width: 150px;
 }
 
 .mfflp-features {
@@ -871,8 +870,8 @@ body.story-page {
 }
 
 .mfflp-features h2 {
-  margin-top: 80px;
-  margin-bottom: 30px;
+  margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 . mfflp-bullets p {
@@ -934,11 +933,11 @@ body.story-page {
 .mfflp-values p { 
   margin: 0 auto;  
   margin-top: 30px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .snuffyandmuffuffu-image {
-  width: 450px;
+  width: 350px;
   height: auto;
   margin: 0 auto;
 }
