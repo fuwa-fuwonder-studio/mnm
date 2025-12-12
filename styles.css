@@ -791,10 +791,10 @@ body {
 /*Mff lp*/
 
 /* story.html だけ背景模様を表示する */
-.story-page {
+body.story-page {
   background:
-    url("../assets/img/paw.png") repeat-y left top,
-    url("../assets/img/paw.png") repeat-y right top;
+    url("assets/img/paw.png") repeat-y left top,
+    url("assets/img/paw.png") repeat-y right top;
   background-size: 150px auto;
   background-color: #FFEBD1;
 }
