@@ -788,6 +788,16 @@ body {
   margin-bottom: 5px; 
 }
 
+/*Mff lp*/
+
+/* story.html だけ背景模様を表示する */
+.story-page {
+  background:
+    url("../assets/img/paw.png") repeat-y left top,
+    url("../assets/img/paw.png") repeat-y right top;
+  background-size: 30px auto;
+}
+
 /* スマホ */
 /* =========================
    スマホ用レイアウト
@@ -1210,7 +1220,12 @@ body {
     max-width: 100%;
     padding:0 15px;
   }
-  
+
+  /* MFF LP*/
+  /*Background*/
+   .story-page {
+    background: none;
+  }
 }
   
 
