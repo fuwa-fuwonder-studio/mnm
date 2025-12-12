@@ -1037,7 +1037,7 @@ body.story-page {
 @media (max-width: 768px) {
 
   body {
-    padding: 0 30px;
+    padding: 0 15px;
   }
 
   /* 全体の横幅を画面にフィットさせる */
