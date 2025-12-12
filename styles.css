@@ -853,6 +853,76 @@ body.story-page {
   display: block;
 }
 
+.mfflp-tagline img {
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.mfflp-muffuffu-image img {
+  width: 300px;
+  margin-bottom: 50px;
+}
+
+.mfflp-features {
+  width: 900px;
+}
+
+.mfflp-features h2 {
+  margin-top: 70px;
+  margin-bottom: 20px;
+}
+
+. mfflp-bullets p {
+  width: 900px;
+  margin: 0 auto; 
+  display: flex;
+  padding: 0px 0;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  text-align: left;
+}
+
+.mfflp-snuffy-sleeping img {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  text-align: left;
+}
+
+.mfflp-keyfeatures {
+  width: 900px;  
+  margin: 0 auto;  
+  display: flex;
+  gap: 60px;
+  padding: 20px 0;
+  justify-content: center;
+  align-items: center;     
+  text-align: left;
+}
+
+.mfflp-keayfeatures-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  text-align:　left;
+}
+
+.mfflp-values {
+  width: 900px;  
+  margin: 0 auto;  
+  padding: 20px 0;
+}
+
+.snuffyandmuffuffu-image {
+  width: 400px;
+  height: auto;
+}
+
 
 /* スマホ */
 /* =========================
