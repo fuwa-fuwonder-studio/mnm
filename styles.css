@@ -795,7 +795,7 @@ body.story-page {
   background:
     url("assets/img/paw.png") repeat-y left top,
     url("assets/img/paw.png") repeat-y right top;
-  background-size: 400px auto;
+  background-size: 380px auto;
   background-color: #FFEBD1;
 }
 
