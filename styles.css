@@ -939,10 +939,10 @@ body.story-page {
 }
 
 .snuffyandmuffuffu-image {
-  width: 300px;
+  width: 350px;
   height: auto;
-  margin: 0 auto;+
-  margin-top: 40px;
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 
