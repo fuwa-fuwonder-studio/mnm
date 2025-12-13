@@ -966,10 +966,31 @@ body.story-page {
     margin: 6px 0;
     border-radius: 2px;
   }
-
+  
   .mobile-nav a.active {
   color: #A37A66;
-}
+  }
+
+  .mobile-nav-parent > a {
+    font-weight: 600;
+  }
+
+  /* サブメニュー */
+  .mobile-sub-nav {
+    list-style: none;
+    padding-left: 16px;
+    margin-top: 8px;
+  }
+
+  .mobile-sub-nav li {
+    margin: 6px 0;
+  }
+
+  .mobile-sub-nav a {
+    font-size: 14px;
+    color: #A37A66;
+    opacity: 0.85;
+  }
   
   /* PCメニューは非表示 */
   .main-nav {
