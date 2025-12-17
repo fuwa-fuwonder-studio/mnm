@@ -952,7 +952,14 @@ body.story-page {
   margin-bottom: 80px;
 }
 
+.Marketing-hero-taglin {
+  width: 900px;
+  height: auto;
+}
+
 .marketing-sub {
+  width: 900px;
+  heifht: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
