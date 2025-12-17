@@ -1028,6 +1028,7 @@ body.story-page {
 }
 
 .creative-images3 {
+  width: 900px;
   display: flex;
   margin: 0 auto;  
   gap: 15px;
@@ -1038,8 +1039,8 @@ body.story-page {
 }
 
 。creative-images3 img {
-  width: 200px;
-  height: suto;
+  width: 170px;
+  height: auto;
 }
 
 
