@@ -936,6 +936,46 @@ body.story-page {
   padding: 40px 0;
 }
 
+/*work*/
+.Marketing-hero img {
+  width: 900px;
+  height: auto;
+}
+
+.work-buttons {
+  width: 500px;   
+  height: auto;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+
+.marketing-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.marketing-sub h2 {
+  margin-top: 15px;   
+  margin-bottom: 8px; 
+}
+
+.marketing-sub p {
+  margin-top: 0px;    
+  margin-bottom: 20px; 
+  line-height: 1.6;   
+}
+
+.marketing-images img {
+  width: 650px;
+  height: auto;
+}
+  
+  
 
 /* スマホ */
 /* =========================
