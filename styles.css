@@ -952,9 +952,17 @@ body.story-page {
   margin-bottom: 80px;
 }
 
-.Marketing-hero-taglin {
+.Marketing-hero-tagline {
   width: 900px;
   height: auto;
+}
+
+..Marketing-hero-tagline p {
+  margin-bottom: 60px;
+}
+
+.marketing-examples {
+  padding: 80px 0;
 }
 
 .marketing-sub {
