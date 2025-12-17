@@ -967,10 +967,10 @@ body.story-page {
 
 .marketing-sub {
   width: 900px;
-  heifht: auto;
+  margin: 0 auto;      
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start; 
   text-align: left;
 }
 
