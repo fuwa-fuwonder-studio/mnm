@@ -990,6 +990,7 @@ body.story-page {
 .marketing-images img {
   width: 650px;
   height: auto;
+  margin-bottom: 30px;
 }
 
 .creative-hero {
@@ -1014,7 +1015,7 @@ body.story-page {
 .creative-images2 {
   display: flex;
   margin: 0 auto;  
-  gap: 60px;
+  gap: 80px;
   padding: 0px auto;
   justify-content: center; 
   margin-bottom: 50px;
