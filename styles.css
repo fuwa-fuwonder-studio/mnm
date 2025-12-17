@@ -172,12 +172,6 @@ body {
 }
 
 /* ====== Top Page layout ====== */
-
-/*一旦非公開*/
-.works-section {
-  display: none;
-}
-
 .hero-title {
   margin-top: 100px;
   margin-bottom: 60px;
@@ -1556,6 +1550,11 @@ body.story-page {
   body.story-page.pageloaded {
     padding: 0 0;
   }
+
+  /*スマホでは非公開*/
+  .works-section {
+  display: none;
+}
   
 }
   
