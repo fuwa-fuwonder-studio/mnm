@@ -1015,7 +1015,7 @@ body.story-page {
 .creative-images2 {
   display: flex;
   margin: 0 auto;  
-  gap: 80px;
+  gap: 60px;
   padding: 0px auto;
   justify-content: center; 
   margin-bottom: 50px;
@@ -1027,7 +1027,7 @@ body.story-page {
   height: suto;
 }
 
-.creative-images2 {
+.creative-images3 {
   display: flex;
   margin: 0 auto;  
   gap: 15px;
