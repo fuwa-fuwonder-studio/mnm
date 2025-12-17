@@ -1032,13 +1032,12 @@ body.story-page {
   display: flex;
   margin: 0 auto;  
   gap: 15px;
-  padding: 0px auto;
   justify-content: center; 
   margin-bottom: 50px;
   align-items: center;
 }
 
-。creative-images3 img {
+.creative-images3 img {
   width: 170px;
   height: auto;
 }
