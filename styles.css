@@ -1057,7 +1057,7 @@ body.story-page {
     display: block;
     position: absolute;
     top: 22px;
-    right: 20px;
+    right: 0px;
     width: 28px;
     cursor: pointer;
     z-index: 2000;
