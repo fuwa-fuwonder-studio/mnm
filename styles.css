@@ -95,7 +95,7 @@ img {
 /* ナビゲーションを横並びに */
 .main-nav ul {
   display: flex;
-  gap: 56px;                   
+  gap: 45px;                   
   list-style: none;
   margin: 0;
   padding: 0;
