@@ -1,0 +1,786 @@
+:root {
+  --ink: #6f584f;
+  --coral: #ef7b67;
+  --rose: #f6c4cc;
+  --sun: #f8dd72;
+  --mint: #bfe2cf;
+  --sky: #bcdde8;
+  --cream: #fff8e9;
+  --paper: #fffdf8;
+  --line: rgba(111, 88, 79, 0.16);
+  --shadow: 0 16px 32px rgba(111, 88, 79, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  border: 8px solid rgba(255, 255, 255, 0.55);
+}
+
+main {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+p {
+  font-size: clamp(15px, 1.35vw, 18px);
+}
+
+a:focus-visible,
+button:focus-visible,
+[class^="Nurie-button-"]:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 4px;
+}
+
+/* Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 8px 42px;
+  background: rgba(255, 253, 248, 0.94);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 8px 22px rgba(111, 88, 79, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  max-width: 1240px;
+}
+
+.logo img {
+  height: 78px;
+  transition: transform 300ms ease;
+}
+
+.logo:hover img {
+  transform: rotate(-2deg) scale(1.04);
+}
+
+.main-nav ul {
+  gap: 28px;
+  align-items: center;
+}
+
+.main-nav a {
+  position: relative;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.main-nav > ul > li > a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  width: 0;
+  height: 3px;
+  background: var(--coral);
+  border-radius: 2px;
+  transform: translateX(-50%);
+  transition: width 220ms ease;
+}
+
+.main-nav > ul > li > a:hover::after {
+  width: 100%;
+}
+
+.main-nav .dropdown-menu {
+  top: calc(100% + 12px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.language-switcher {
+  top: 10px;
+  right: 16px;
+  padding: 3px 7px;
+  background: var(--sun);
+  border-radius: 8px;
+}
+
+.language-switcher button {
+  font-weight: 700;
+  color: var(--ink);
+}
+
+/* Shared page rhythm */
+main > section,
+main > div {
+  position: relative;
+}
+
+main > section:nth-child(odd) {
+  background-color: var(--cream);
+}
+
+main > section:nth-child(even) {
+  background-color: var(--paper);
+}
+
+.hero,
+.Hairball\ Friends,
+.mff-hero,
+.mfflp-hero,
+.IamMinami {
+  min-height: calc(100vh - 96px);
+  display: grid;
+  place-items: center;
+  padding: 72px 24px 104px;
+}
+
+.hero::after,
+.Hairball\ Friends::after,
+.mff-hero::after,
+.mfflp-hero::after,
+.IamMinami::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -34px;
+  height: 70px;
+  background: inherit;
+  border-radius: 0 0 50% 50%;
+  z-index: 2;
+}
+
+.section-kicker {
+  margin-bottom: 8px;
+  color: var(--coral);
+  font-family: "PaytoneOne", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+/* Top page */
+.hero {
+  background-color: var(--sky) !important;
+}
+
+.hero-inner {
+  width: min(1100px, 100%);
+}
+
+.hero-title {
+  margin: 0 0 34px;
+  font-size: clamp(34px, 5vw, 68px);
+  color: #fff;
+  text-shadow: 0 3px 0 rgba(111, 88, 79, 0.1);
+}
+
+.hero-characters {
+  min-height: 260px;
+  align-items: flex-end;
+  gap: clamp(8px, 3vw, 34px);
+  padding: 10px 20px;
+}
+
+.hero-character {
+  width: clamp(120px, 17vw, 205px);
+  filter: drop-shadow(0 18px 12px rgba(111, 88, 79, 0.15));
+  transform-origin: 50% 100%;
+  animation: friend-float 5.2s ease-in-out infinite;
+}
+
+.hero-character:nth-child(2) { animation-delay: -1.4s; }
+.hero-character:nth-child(3) { animation-delay: -2.7s; }
+.hero-character:nth-child(4) { animation-delay: -3.8s; }
+
+.hero-tagline {
+  max-width: 720px;
+  margin: 24px auto 0;
+  color: #5e5551;
+  font-weight: 700;
+}
+
+.app-section {
+  padding: 150px 24px 120px;
+  background-color: var(--paper) !important;
+}
+
+.app-inner {
+  width: min(1000px, 100%);
+  min-height: 500px;
+  margin: 0 auto;
+  gap: clamp(32px, 7vw, 90px);
+}
+
+.app-icon {
+  width: min(430px, 42vw);
+  filter: drop-shadow(0 20px 18px rgba(111, 88, 79, 0.14));
+}
+
+.app-title {
+  width: min(390px, 40vw);
+}
+
+.app-learnmore {
+  margin-top: -70px;
+}
+
+.friends-preview-section {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: 40px;
+  min-height: 720px;
+  padding: 120px max(24px, calc((100vw - 1120px) / 2));
+  background-color: var(--rose) !important;
+}
+
+.friends-preview-copy {
+  position: relative;
+  z-index: 3;
+  text-align: left;
+}
+
+.friends-preview-copy h2 {
+  margin-bottom: 24px;
+  color: #fff;
+  font-size: clamp(38px, 5vw, 66px);
+}
+
+.friends-preview-copy p:not(.section-kicker) {
+  max-width: 540px;
+}
+
+.soft-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin-top: 30px;
+  padding: 12px 24px;
+  color: #fff;
+  background: var(--coral);
+  border: 2px solid #fff;
+  border-radius: 8px;
+  box-shadow: 0 7px 0 #c95f54;
+  font-family: "PaytoneOne", sans-serif;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.soft-cta:hover {
+  transform: translateY(3px);
+  box-shadow: 0 4px 0 #c95f54;
+}
+
+.friends-preview-art {
+  position: relative;
+  min-height: 500px;
+}
+
+.preview-friend {
+  position: absolute;
+  width: clamp(150px, 18vw, 240px);
+  filter: drop-shadow(0 16px 12px rgba(111, 88, 79, 0.15));
+  animation: friend-float 5s ease-in-out infinite;
+}
+
+.preview-friend--one { left: 2%; top: 5%; }
+.preview-friend--two { right: 3%; top: 2%; animation-delay: -1s; }
+.preview-friend--three { left: 20%; bottom: 0; animation-delay: -2s; }
+.preview-friend--four { right: 5%; bottom: 3%; animation-delay: -3s; }
+
+/* About */
+.page-about .hero {
+  background-color: var(--sun) !important;
+}
+
+.about-hero-inner {
+  width: min(820px, 100%);
+}
+
+.about-FSS-Logo {
+  filter: drop-shadow(0 18px 14px rgba(111, 88, 79, 0.12));
+}
+
+.about-hero-tagline {
+  width: min(800px, 100%);
+  margin: 50px auto 0;
+}
+
+.value-section {
+  padding: 130px 24px 100px;
+  background: var(--paper) !important;
+}
+
+.value-title {
+  margin: 0 0 42px;
+  color: var(--coral);
+  font-size: clamp(38px, 5vw, 60px);
+}
+
+.value-image-wrapper {
+  filter: drop-shadow(0 15px 14px rgba(111, 88, 79, 0.1));
+}
+
+.value-tagline {
+  width: min(760px, 100%);
+  margin: 30px auto 0;
+  padding: 30px;
+  border-top: 2px solid var(--mint);
+  border-bottom: 2px solid var(--mint);
+}
+
+/* Hairball Friends */
+.page-hairball-friends .Hairball\ Friends {
+  background-color: var(--mint) !important;
+}
+
+.haorballfriends-hero-inner {
+  width: min(1120px, 100%);
+  margin: 0 auto 30px;
+}
+
+.hairball-friends-logo img,
+img.hairball-friends-logo {
+  width: min(370px, 36vw);
+}
+
+.hairball-friends-SnuffyandFriends {
+  width: min(640px, 56vw);
+  filter: drop-shadow(0 18px 15px rgba(111, 88, 79, 0.12));
+}
+
+.Hairball-friends-hero-tagline {
+  width: min(780px, 100%);
+  margin: 0 auto;
+}
+
+.charactors-section {
+  padding: 120px 24px;
+  background: var(--paper) !important;
+}
+
+.Muffuffu-container,
+.Baffuffu-container,
+.Fuffuffu-container,
+.Moffuffu-container,
+.Snuffy-container {
+  width: min(920px, 100%);
+  min-height: 320px;
+  margin: 0 auto 38px;
+  padding: 40px clamp(24px, 5vw, 64px);
+  gap: clamp(32px, 7vw, 80px);
+  border-bottom: 3px solid var(--line);
+}
+
+.charactors-section img {
+  width: clamp(170px, 23vw, 250px);
+  filter: drop-shadow(0 13px 10px rgba(111, 88, 79, 0.12));
+}
+
+.charactors-section h2 {
+  color: var(--coral);
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.Snufy-last-paragraph {
+  width: min(760px, 100%);
+  padding: 36px 0;
+}
+
+/* My Furry Friends */
+.page-mff .mff-hero,
+.story-page .mfflp-hero {
+  background-color: var(--rose) !important;
+}
+
+.mff-header,
+.Why-I-built-this-app,
+.The-world-of-MFF,
+.How-it-was-made,
+.MFF-Thankyou {
+  width: min(1000px, 100%);
+}
+
+.Why-I-built-this-app-section,
+.The-world-of-MFF-section,
+.How-it-was-made-section,
+.MFF-Thankyou {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.Why-I-built-this-app-section,
+.How-it-was-made-section {
+  background-color: var(--paper) !important;
+}
+
+.The-world-of-MFF-section {
+  background-color: var(--sky) !important;
+}
+
+.mff-appicon,
+.MFF-screenshots img,
+.Romeo-photo img,
+.Snuffy-Meltan-photos img {
+  filter: drop-shadow(0 14px 12px rgba(111, 88, 79, 0.12));
+}
+
+.story-page {
+  background-image: none;
+}
+
+.story-page main > section:not(.mfflp-hero) {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* World and colouring */
+.page-world .IamMinami {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--sun) !important;
+}
+
+.Minami-image {
+  width: min(700px, 84vw);
+}
+
+.Minami-text {
+  width: min(820px, 100%);
+  margin: 0 auto;
+}
+
+.Minami-text p {
+  margin: 38px 0 0;
+}
+
+.Colours-of-This-World {
+  padding: 140px 24px 100px;
+  background: var(--paper) !important;
+}
+
+.Colours-of-This-World-Title {
+  margin-bottom: 12px;
+  color: var(--coral);
+  font-size: clamp(34px, 5vw, 58px);
+}
+
+.Nurie {
+  width: min(800px, 94vw);
+  height: auto;
+  aspect-ratio: 800 / 556;
+  margin-top: 44px;
+  filter: drop-shadow(0 20px 18px rgba(111, 88, 79, 0.12));
+}
+
+.Nurie-button {
+  width: min(1000px, 100%);
+}
+
+.Nurie-button-1 h2,
+.Nurie-button-2 h2 {
+  padding: 7px 10px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  background: #fff;
+  font-size: clamp(16px, 2vw, 22px);
+  transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.Nurie-button-1 h2:hover,
+.Nurie-button-2 h2:hover,
+.Nurie-button-1 h2.active,
+.Nurie-button-2 h2.active {
+  opacity: 1;
+  transform: translateY(-3px) rotate(-1deg);
+  background: var(--cream);
+}
+
+.What_makes_this_world_last_paragraph {
+  padding: 70px 24px 100px;
+  background: var(--mint) !important;
+}
+
+.What_makes_this_world_last_paragraph p {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+/* Support and policy pages */
+.page-faq main,
+.page-privacypolicy main {
+  padding: 80px 24px 120px;
+  background: var(--paper);
+}
+
+.mff-helpandsupport,
+.mff-privacypolicy {
+  width: min(900px, 100%);
+}
+
+.mff-helpandsupport h1,
+.mff-privacypolicy h1 {
+  margin: 30px 0 70px;
+  color: var(--coral);
+  font-size: clamp(36px, 5vw, 56px);
+}
+
+.mff-helpandsupport h2,
+.mff-privacypolicy h2 {
+  padding-top: 20px;
+  border-top: 2px solid var(--mint);
+}
+
+/* Motion */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(34px) scale(0.985);
+  transition: opacity 750ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.text-reveal {
+  transition-delay: 100ms;
+}
+
+@keyframes friend-float {
+  0%, 100% { transform: translateY(0) rotate(-1deg) scale(1); }
+  50% { transform: translateY(-13px) rotate(1.5deg) scale(1.015); }
+}
+
+.site-footer {
+  padding: 48px 24px;
+  color: var(--ink);
+  background: var(--paper);
+  border-top: 1px solid var(--line);
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    min-height: 76px;
+    padding: 6px 20px;
+  }
+
+  .logo img {
+    height: 64px;
+  }
+
+  .language-switcher {
+    display: none;
+  }
+
+  .hamburger {
+    top: 25px;
+    right: 22px;
+  }
+
+  .mobile-nav {
+    background: var(--paper);
+    border-left: 1px solid var(--line);
+  }
+
+  .hero,
+  .Hairball\ Friends,
+  .mff-hero,
+  .mfflp-hero,
+  .IamMinami {
+    min-height: auto;
+    padding: 70px 20px 90px;
+  }
+
+  .app-inner,
+  .mff-header,
+  .Why-I-built-this-app,
+  .The-world-of-MFF,
+  .MFF-Thankyou {
+    flex-direction: column;
+  }
+
+  .app-icon,
+  .app-title {
+    width: min(380px, 78vw);
+  }
+
+  .app-learnmore {
+    margin-top: 20px;
+  }
+
+  .friends-preview-section {
+    grid-template-columns: 1fr;
+    padding-top: 90px;
+  }
+
+  .friends-preview-copy {
+    text-align: center;
+  }
+
+  .friends-preview-copy p:not(.section-kicker) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .friends-preview-art {
+    min-height: 420px;
+  }
+
+  .haorballfriends-hero-inner {
+    flex-direction: column;
+  }
+
+  .hairball-friends-logo img,
+  img.hairball-friends-logo,
+  .hairball-friends-SnuffyandFriends {
+    width: min(620px, 88vw);
+  }
+
+  .values-bottom-row {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 0;
+  }
+
+  .Muffuffu-container,
+  .Baffuffu-container,
+  .Fuffuffu-container,
+  .Moffuffu-container,
+  .Snuffy-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .Muffuffu,
+  .Baffuffu,
+  .Fuffuffu,
+  .Moffuffu,
+  .Snuffy {
+    align-items: center;
+    text-align: center;
+  }
+
+  .Nurie-button-1,
+  .Nurie-button-2 {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  body::before {
+    border-width: 4px;
+  }
+
+  .hero-inner {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .hero-title {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 8px;
+    font-size: 36px;
+    overflow-wrap: anywhere;
+    white-space: normal;
+  }
+
+  .hero-characters {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    min-height: 0;
+    padding: 0;
+  }
+
+  .hero-character {
+    width: min(145px, 40vw);
+    justify-self: center;
+  }
+
+  .friends-preview-art {
+    min-height: 330px;
+  }
+
+  .preview-friend {
+    width: min(140px, 38vw);
+  }
+
+  .value-image-wrapper {
+    width: min(340px, 90vw);
+    height: min(340px, 90vw);
+  }
+
+  .value-text-center,
+  .value-text-left,
+  .value-text-right {
+    width: 82%;
+  }
+
+  .value-text-center h2,
+  .value-text-left h2,
+  .value-text-right h2 {
+    font-size: 20px;
+  }
+
+  .value-text-center p,
+  .value-text-left p,
+  .value-text-right p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .Nurie-button-1 h2,
+  .Nurie-button-2 h2 {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+  }
+}

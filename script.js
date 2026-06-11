@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const pageName = window.location.pathname.split("/").pop() || "index.html";
+  const pageClassMap = {
+    "about.html": "page-about",
+    "hairball-friends.html": "page-hairball-friends",
+    "mff.html": "page-mff",
+    "world.html": "page-world",
+    "story.html": "page-story",
+    "FAQ.html": "page-faq",
+    "privacypolicy.html": "page-privacypolicy"
+  };
+
+  if (pageClassMap[pageName]) {
+    document.body.classList.add(pageClassMap[pageName]);
+  }
+
   // ① ページ読み込み時：フェードイン
   document.body.classList.add("page-loaded");
 
@@ -35,14 +50,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ③ 言語切り替え（EN / JP）
+  const setLanguage = selected => {
+    document.documentElement.lang = selected === "jp" ? "ja" : "en";
+    document.querySelectorAll("[data-lang]").forEach(el => {
+      el.style.display = (el.dataset.lang === selected) ? "inline" : "none";
+    });
+    document.querySelectorAll("[data-lang-btn]").forEach(btn => {
+      btn.setAttribute("aria-pressed", String(btn.dataset.langBtn === selected));
+    });
+  };
+
+  const savedLanguage = window.localStorage.getItem("ffs-language") || "en";
+  setLanguage(savedLanguage);
+
   document.querySelectorAll("[data-lang-btn]").forEach(btn => {
     btn.addEventListener("click", () => {
       const selected = btn.dataset.langBtn;
-
-      // data-lang を持つ要素をすべて対象にする
-      document.querySelectorAll("[data-lang]").forEach(el => {
-        el.style.display = (el.dataset.lang === selected) ? "inline" : "none";
-      });
+      window.localStorage.setItem("ffs-language", selected);
+      setLanguage(selected);
     });
   });
 
@@ -54,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // アイコンタップでメニューの表示 / 非表示を切り替え
     menuToggle.addEventListener("click", () => {
       mobileMenu.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", String(mobileMenu.classList.contains("active")));
     });
 
     // モバイルメニュー内のリンクをクリックしたらメニューを閉じる（任意）
@@ -84,7 +110,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!button) return;
 
-      button.addEventListener("click", () => {
+      button.setAttribute("role", "button");
+      button.setAttribute("tabindex", "0");
+
+      const toggleColour = () => {
         const targetImg = document.querySelector(`.${layerClass} img`);
         if (!targetImg) return;
 
@@ -96,7 +125,49 @@ document.addEventListener("DOMContentLoaded", () => {
           targetImg.classList.add("visible");
           button.classList.add("active");
         }
+      };
+
+      button.addEventListener("click", toggleColour);
+      button.addEventListener("keydown", event => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          toggleColour();
+        }
       });
     });
+  }
+
+  // ⑥ スクロールに合わせて、文章やセクションをやわらかく表示する
+  const revealTargets = document.querySelectorAll([
+    "main > section > *",
+    ".charactors-section > div",
+    ".values-grid > *",
+    ".mff-helpandsupport > *",
+    ".mff-privacypolicy > *"
+  ].join(","));
+
+  revealTargets.forEach(target => {
+    target.classList.add("reveal-on-scroll");
+    if (target.matches("h1, h2, h3, p") || target.querySelector("h1, h2, h3")) {
+      target.classList.add("text-reveal");
+    }
+  });
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: "0px 0px -8% 0px"
+    });
+
+    revealTargets.forEach(target => observer.observe(target));
+  } else {
+    revealTargets.forEach(target => target.classList.add("is-visible"));
   }
 });
