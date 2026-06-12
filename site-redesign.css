@@ -972,12 +972,74 @@ body.story-page {
     padding: 72px 0 28px;
   }
 
+  .story-page .mfflp-hero,
+  .story-page .mfflp-hero-inner,
+  .story-page .mfflp-hero-bg-img {
+    height: 300px;
+  }
+
+  .story-page .mfflp-hero-bg-img {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .story-page .mfflp-features {
     width: calc(100% - 36px);
   }
 
+  .story-page .mfflp-features h2,
+  .story-page .mfflp-features h3,
+  .story-page .mfflp-features p {
+    width: 100%;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .story-page .mfflp-perfectfor-text,
+  .story-page .mfflp-keayfeatures-text {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
   .story-page .mfflp-values {
     grid-template-columns: 1fr;
+  }
+
+  .page-mff .mff-header {
+    width: 100%;
+    gap: 28px;
+    padding: 24px 0 36px;
+  }
+
+  .page-mff .mff-appicon {
+    width: min(330px, 78vw);
+  }
+
+  .page-mff .MFF-appicon {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .page-mff .mff-app-content {
+    width: 100%;
+  }
+
+  .page-mff .Mff-app-title {
+    display: block;
+    width: min(330px, 78vw);
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .page-mff .MFF-app-store-link {
+    display: none;
   }
 
   .preview-friend {
