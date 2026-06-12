@@ -137,14 +137,44 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ⑥ スクロールに合わせて、文章やセクションをやわらかく表示する
-  const revealTargets = document.querySelectorAll([
-    "main > section > *",
-    ".charactors-section > div",
-    ".values-grid > *",
+  // ⑥ ファーストビューは、ページ表示時に順番にポップさせる
+  const heroTargets = Array.from(document.querySelectorAll([
+    ".hero-title",
+    ".hero-character",
+    ".hero-tagline",
+    ".about-hero-inner > *",
+    ".haorballfriends-hero-inner > *",
+    ".Hairball-friends-hero-tagline",
+    ".mff-header > *",
+    ".mff-hero > p",
+    ".mfflp-hero-bg-img",
+    ".mfflp-hero-title-img",
+    ".IamMinami > *",
+    ".mff-helpandsupport > h1",
+    ".mff-privacypolicy > h1"
+  ].join(",")));
+
+  heroTargets.forEach((target, index) => {
+    target.classList.add("hero-pop");
+    target.style.setProperty("--pop-delay", `${80 + index * 110}ms`);
+  });
+
+  // ⑦ スクロールに合わせて、文字と画像を下から表示する
+  const revealTargets = Array.from(document.querySelectorAll([
+    "main h1",
+    "main h2",
+    "main h3",
+    "main p",
+    "main img",
+    "main .soft-cta",
     ".mff-helpandsupport > *",
     ".mff-privacypolicy > *"
-  ].join(","));
+  ].join(","))).filter(target => {
+    return !target.classList.contains("hero-pop") &&
+      !target.closest(".Nurie") &&
+      !target.closest(".story-paw-field") &&
+      !target.closest(".site-header");
+  });
 
   revealTargets.forEach(target => {
     target.classList.add("reveal-on-scroll");
@@ -169,5 +199,53 @@ document.addEventListener("DOMContentLoaded", () => {
     revealTargets.forEach(target => observer.observe(target));
   } else {
     revealTargets.forEach(target => target.classList.add("is-visible"));
+  }
+
+  // ⑧ Storyページの肉球は、本文の余白にだけ点在させる
+  if (document.body.classList.contains("story-page")) {
+    const pawField = document.createElement("div");
+    pawField.className = "story-paw-field";
+    pawField.setAttribute("aria-hidden", "true");
+
+    const pawPositions = [
+      [4, 19, -12], [82, 27, 9], [8, 39, 7], [78, 48, -8],
+      [3, 59, 12], [84, 67, -10], [9, 78, -6], [80, 88, 11]
+    ];
+
+    pawPositions.forEach(([left, top, rotate]) => {
+      const paw = document.createElement("img");
+      paw.src = "../assets/img/paw.png";
+      paw.alt = "";
+      paw.className = "story-paw";
+      paw.style.left = `${left}%`;
+      paw.style.top = `${top}%`;
+      paw.style.setProperty("--paw-rotate", `${rotate}deg`);
+      pawField.appendChild(paw);
+    });
+
+    document.body.appendChild(pawField);
+    const sizePawField = () => {
+      pawField.style.height = `${document.documentElement.scrollHeight}px`;
+    };
+    sizePawField();
+    const paws = Array.from(pawField.children);
+    let pawFrame;
+    const updatePaws = () => {
+      pawFrame = undefined;
+      const viewportCenter = window.scrollY + window.innerHeight / 2;
+      paws.forEach(paw => {
+        const pawCenter = paw.offsetTop + paw.offsetHeight / 2;
+        paw.classList.toggle("is-visible", Math.abs(pawCenter - viewportCenter) < window.innerHeight * 0.85);
+      });
+    };
+
+    window.addEventListener("scroll", () => {
+      if (!pawFrame) pawFrame = window.requestAnimationFrame(updatePaws);
+    }, { passive: true });
+    window.addEventListener("resize", () => {
+      sizePawField();
+      updatePaws();
+    });
+    updatePaws();
   }
 });

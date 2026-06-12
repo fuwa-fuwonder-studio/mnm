@@ -110,10 +110,21 @@ button:focus-visible,
 }
 
 .main-nav .dropdown-menu {
-  top: calc(100% + 12px);
+  top: 100%;
+  padding-top: 20px;
+  background-clip: content-box;
   border: 1px solid var(--line);
   border-radius: 8px;
   box-shadow: var(--shadow);
+}
+
+.main-nav .has-dropdown::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20px;
 }
 
 .language-switcher {
@@ -144,7 +155,7 @@ main > section:nth-child(even) {
 }
 
 .hero,
-.Hairball\ Friends,
+.Hairball.Friends,
 .mff-hero,
 .mfflp-hero,
 .IamMinami {
@@ -155,7 +166,7 @@ main > section:nth-child(even) {
 }
 
 .hero::after,
-.Hairball\ Friends::after,
+.Hairball.Friends::after,
 .mff-hero::after,
 .mfflp-hero::after,
 .IamMinami::after {
@@ -241,7 +252,8 @@ main > section:nth-child(even) {
 }
 
 .app-learnmore {
-  margin-top: -70px;
+  margin-top: -44px;
+  text-align: center;
 }
 
 .friends-preview-section {
@@ -295,6 +307,15 @@ main > section:nth-child(even) {
 .friends-preview-art {
   position: relative;
   min-height: 500px;
+  display: grid;
+  place-items: center;
+}
+
+.friends-preview-group {
+  width: min(620px, 100%);
+  height: auto;
+  filter: drop-shadow(0 18px 14px rgba(111, 88, 79, 0.15));
+  animation: friend-float 5.5s ease-in-out infinite;
 }
 
 .preview-friend {
@@ -342,6 +363,34 @@ main > section:nth-child(even) {
   filter: drop-shadow(0 15px 14px rgba(111, 88, 79, 0.1));
 }
 
+@media (min-width: 901px) {
+  .value-image-wrapper {
+    width: 400px;
+    height: 400px;
+  }
+
+  .value-text-center,
+  .value-text-left,
+  .value-text-right {
+    width: 78%;
+    padding: 14px;
+  }
+
+  .value-text-center h2,
+  .value-text-left h2,
+  .value-text-right h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+  }
+
+  .value-text-center p,
+  .value-text-left p,
+  .value-text-right p {
+    font-size: 14px;
+    line-height: 1.45;
+  }
+}
+
 .value-tagline {
   width: min(760px, 100%);
   margin: 30px auto 0;
@@ -351,8 +400,11 @@ main > section:nth-child(even) {
 }
 
 /* Hairball Friends */
-.page-hairball-friends .Hairball\ Friends {
+.page-hairball-friends .Hairball.Friends {
   background-color: var(--mint) !important;
+  padding-left: clamp(40px, 6vw, 96px);
+  padding-right: clamp(40px, 6vw, 96px);
+  padding-bottom: 120px;
 }
 
 .haorballfriends-hero-inner {
@@ -433,6 +485,19 @@ img.hairball-friends-logo {
 .Why-I-built-this-app-section,
 .How-it-was-made-section {
   background-color: var(--paper) !important;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.Why-I-built-this-app,
+.How-it-was-made {
+  width: min(1000px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Why-I-built-this-app {
+  margin-top: 0;
 }
 
 .The-world-of-MFF-section {
@@ -448,6 +513,88 @@ img.hairball-friends-logo {
 
 .story-page {
   background-image: none;
+}
+
+.story-page main {
+  position: relative;
+  z-index: 1;
+}
+
+.story-page .mfflp-hero {
+  display: block;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--paper) !important;
+}
+
+.story-page .mfflp-hero::after {
+  display: none;
+}
+
+.mfflp-hero-inner {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  position: relative;
+}
+
+.mfflp-hero-bg-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 8 / 3;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mfflp-hero-title-img {
+  position: absolute;
+  top: clamp(22px, 5vw, 72px);
+  left: clamp(24px, 7vw, 120px);
+  right: auto;
+  width: clamp(190px, 25vw, 410px);
+  height: auto;
+  z-index: 2;
+}
+
+.mfflp-tagline {
+  padding: 76px 24px 24px;
+  text-align: center;
+}
+
+.mfflp-tagline-en {
+  display: inline-block;
+  color: #ef7b67;
+  font-family: "PaytoneOne", sans-serif;
+  font-size: clamp(28px, 4.5vw, 58px);
+  line-height: 1.25;
+}
+
+.mfflp-tagline img {
+  width: min(900px, 90vw);
+  margin: 0 auto;
+}
+
+.story-paw-field {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.story-paw {
+  position: absolute;
+  width: clamp(110px, 16vw, 240px);
+  opacity: 0;
+  transform: translateY(26px) rotate(var(--paw-rotate));
+  transition: opacity 700ms ease, transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-paw.is-visible {
+  opacity: 0.12;
+  transform: translateY(0) rotate(var(--paw-rotate));
 }
 
 .story-page main > section:not(.mfflp-hero) {
@@ -564,6 +711,31 @@ img.hairball-friends-logo {
   transform: translateY(0) scale(1);
 }
 
+.hero-pop {
+  opacity: 0;
+  transform: scale(0.72) translateY(20px);
+}
+
+.page-loaded .hero-pop {
+  animation: hero-pop-in 720ms cubic-bezier(0.22, 1.4, 0.36, 1) forwards;
+  animation-delay: var(--pop-delay, 100ms);
+}
+
+.hero-character.hero-pop {
+  animation: none;
+}
+
+.page-loaded .hero-character.hero-pop {
+  animation: hero-pop-in 720ms cubic-bezier(0.22, 1.4, 0.36, 1) forwards,
+    friend-float 5.2s ease-in-out calc(var(--pop-delay, 100ms) + 720ms) infinite;
+}
+
+@keyframes hero-pop-in {
+  0% { opacity: 0; transform: scale(0.72) translateY(24px); }
+  72% { opacity: 1; transform: scale(1.05) translateY(-5px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
 .text-reveal {
   transition-delay: 100ms;
 }
@@ -602,10 +774,14 @@ img.hairball-friends-logo {
   .mobile-nav {
     background: var(--paper);
     border-left: 1px solid var(--line);
+    height: 100dvh;
+    min-height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
   }
 
   .hero,
-  .Hairball\ Friends,
+  .Hairball.Friends,
   .mff-hero,
   .mfflp-hero,
   .IamMinami {
@@ -648,6 +824,10 @@ img.hairball-friends-logo {
     min-height: 420px;
   }
 
+  .friends-preview-group {
+    width: min(620px, 88vw);
+  }
+
   .haorballfriends-hero-inner {
     flex-direction: column;
   }
@@ -656,6 +836,18 @@ img.hairball-friends-logo {
   img.hairball-friends-logo,
   .hairball-friends-SnuffyandFriends {
     width: min(620px, 88vw);
+  }
+
+  .page-hairball-friends .Hairball.Friends {
+    padding-left: 28px;
+    padding-right: 28px;
+    padding-bottom: 120px;
+  }
+
+  .mfflp-hero-title-img {
+    top: 18px;
+    left: 20px;
+    width: min(210px, 38vw);
   }
 
   .values-bottom-row {
@@ -729,7 +921,11 @@ img.hairball-friends-logo {
   }
 
   .friends-preview-art {
-    min-height: 330px;
+    min-height: 300px;
+  }
+
+  .friends-preview-group {
+    width: min(360px, 92vw);
   }
 
   .preview-friend {
