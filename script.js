@@ -14,10 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add(pageClassMap[pageName]);
   }
 
-  // ① ページ読み込み時：フェードイン
-  document.body.classList.add("page-loaded");
-
-  // ② ページ内リンククリック時：フェードアウトしてから遷移
+  // ① ページ内リンククリック時：フェードアウトしてから遷移
   const links = document.querySelectorAll('a[href]');
 
   links.forEach(link => {
@@ -156,8 +153,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   heroTargets.forEach((target, index) => {
     target.classList.add("hero-pop");
-    target.style.setProperty("--pop-delay", `${80 + index * 110}ms`);
+    target.style.setProperty("--pop-delay", `${220 + index * 240}ms`);
   });
+
+  // 初期状態を整えてからページ全体を表示し、FVの動きを確実に見せる。
+  document.body.classList.add("page-loaded");
 
   // ⑦ スクロールに合わせて、文字と画像を下から表示する
   const revealTargets = Array.from(document.querySelectorAll([
@@ -176,8 +176,9 @@ document.addEventListener("DOMContentLoaded", () => {
       !target.closest(".site-header");
   });
 
-  revealTargets.forEach(target => {
+  revealTargets.forEach((target, index) => {
     target.classList.add("reveal-on-scroll");
+    target.style.setProperty("--reveal-delay", `${(index % 3) * 120}ms`);
     if (target.matches("h1, h2, h3, p") || target.querySelector("h1, h2, h3")) {
       target.classList.add("text-reveal");
     }
@@ -192,8 +193,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }, {
-      threshold: 0.12,
-      rootMargin: "0px 0px -8% 0px"
+      threshold: 0.18,
+      rootMargin: "0px 0px -12% 0px"
     });
 
     revealTargets.forEach(target => observer.observe(target));
@@ -201,51 +202,4 @@ document.addEventListener("DOMContentLoaded", () => {
     revealTargets.forEach(target => target.classList.add("is-visible"));
   }
 
-  // ⑧ Storyページの肉球は、本文の余白にだけ点在させる
-  if (document.body.classList.contains("story-page")) {
-    const pawField = document.createElement("div");
-    pawField.className = "story-paw-field";
-    pawField.setAttribute("aria-hidden", "true");
-
-    const pawPositions = [
-      [4, 19, -12], [82, 27, 9], [8, 39, 7], [78, 48, -8],
-      [3, 59, 12], [84, 67, -10], [9, 78, -6], [80, 88, 11]
-    ];
-
-    pawPositions.forEach(([left, top, rotate]) => {
-      const paw = document.createElement("img");
-      paw.src = "../assets/img/paw.png";
-      paw.alt = "";
-      paw.className = "story-paw";
-      paw.style.left = `${left}%`;
-      paw.style.top = `${top}%`;
-      paw.style.setProperty("--paw-rotate", `${rotate}deg`);
-      pawField.appendChild(paw);
-    });
-
-    document.body.appendChild(pawField);
-    const sizePawField = () => {
-      pawField.style.height = `${document.documentElement.scrollHeight}px`;
-    };
-    sizePawField();
-    const paws = Array.from(pawField.children);
-    let pawFrame;
-    const updatePaws = () => {
-      pawFrame = undefined;
-      const viewportCenter = window.scrollY + window.innerHeight / 2;
-      paws.forEach(paw => {
-        const pawCenter = paw.offsetTop + paw.offsetHeight / 2;
-        paw.classList.toggle("is-visible", Math.abs(pawCenter - viewportCenter) < window.innerHeight * 0.85);
-      });
-    };
-
-    window.addEventListener("scroll", () => {
-      if (!pawFrame) pawFrame = window.requestAnimationFrame(updatePaws);
-    }, { passive: true });
-    window.addEventListener("resize", () => {
-      sizePawField();
-      updatePaws();
-    });
-    updatePaws();
-  }
 });
