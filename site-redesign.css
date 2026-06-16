@@ -563,6 +563,46 @@ body.story-page {
   z-index: 2;
 }
 
+.story-page .mfflp-download-cta {
+  width: min(900px, calc(100% - 48px));
+  margin: 42px auto 0;
+  padding: 28px clamp(22px, 4vw, 42px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(18px, 4vw, 38px);
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 28px rgba(74, 45, 31, 0.08);
+}
+
+.story-page .mfflp-download-icon {
+  display: block;
+  width: clamp(86px, 12vw, 130px);
+  height: auto;
+  flex: 0 0 auto;
+  filter: drop-shadow(0 10px 16px rgba(74, 45, 31, 0.14));
+}
+
+.story-page .mfflp-download-store-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 1 auto;
+  transition: transform 0.25s ease;
+}
+
+.story-page .mfflp-download-store-link:hover {
+  transform: translateY(-3px);
+}
+
+.story-page .mfflp-download-store-link img {
+  display: block;
+  width: clamp(150px, 20vw, 210px);
+  height: auto;
+}
+
 .mfflp-tagline {
   width: min(1080px, calc(100% - 48px));
   margin: 0 auto;
@@ -970,6 +1010,21 @@ body.story-page {
   .mfflp-tagline {
     width: calc(100% - 28px);
     padding: 72px 0 28px;
+  }
+
+  .story-page .mfflp-download-cta {
+    width: calc(100% - 36px);
+    margin-top: 28px;
+    padding: 22px 18px;
+    gap: 18px;
+  }
+
+  .story-page .mfflp-download-icon {
+    width: 82px;
+  }
+
+  .story-page .mfflp-download-store-link img {
+    width: 170px;
   }
 
   .story-page .mfflp-hero,
