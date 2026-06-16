@@ -571,10 +571,7 @@ body.story-page {
   align-items: center;
   justify-content: center;
   gap: clamp(18px, 4vw, 38px);
-  background: var(--cream);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  box-shadow: 0 14px 28px rgba(74, 45, 31, 0.08);
+  background: transparent;
 }
 
 .story-page .mfflp-download-icon {
