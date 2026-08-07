@@ -606,22 +606,23 @@ body.story-page {
 }
 
 .story-page .mfflp-download-cta {
-  width: min(900px, calc(100% - 48px));
-  margin: 42px auto 0;
-  padding: 28px clamp(22px, 4vw, 42px);
+  width: 100%;
+  margin: 0;
+  padding: 58px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 4vw, 38px);
-  background: transparent;
+  gap: clamp(24px, 5vw, 64px);
+  background: var(--paper);
 }
 
 .story-page .mfflp-download-icon {
   display: block;
-  width: clamp(86px, 12vw, 130px);
+  width: clamp(118px, 16vw, 190px);
   height: auto;
   flex: 0 0 auto;
-  filter: drop-shadow(0 10px 16px rgba(74, 45, 31, 0.14));
+  border-radius: 24%;
+  box-shadow: 0 18px 30px rgba(111, 88, 79, 0.18);
 }
 
 .story-page .mfflp-download-store-link {
@@ -1297,14 +1298,15 @@ body.story-page {
   }
 
   .story-page .mfflp-download-cta {
-    width: calc(100% - 36px);
-    margin-top: 28px;
-    padding: 22px 18px;
-    gap: 18px;
+    width: 100%;
+    margin-top: 0;
+    padding: 58px 24px;
+    flex-direction: column;
+    gap: clamp(24px, 5vw, 64px);
   }
 
   .story-page .mfflp-download-icon {
-    width: 82px;
+    width: clamp(118px, 16vw, 190px);
   }
 
   .story-page .mfflp-download-store-link img {
