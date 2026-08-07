@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const pageName = window.location.pathname.split("/").pop() || "index.html";
   const pageClassMap = {
-    "about.html": "page-about",
+    "about.html": window.location.pathname.includes("/oneswipe/") ? "page-one-swipe-about" : "page-about",
     "hairball-friends.html": "page-hairball-friends",
     "mff.html": "page-mff",
     "world.html": "page-world",
@@ -13,6 +13,42 @@ document.addEventListener("DOMContentLoaded", () => {
   if (pageClassMap[pageName]) {
     document.body.classList.add(pageClassMap[pageName]);
   }
+
+  // Keep the One Swipe menu consistent across every existing page without
+  // duplicating the same header change in each HTML file.
+  const isNestedPage = window.location.pathname.includes("/mff/") ||
+    window.location.pathname.includes("/oneswipe/");
+  const rootPrefix = isNestedPage ? "../" : "";
+  const oneSwipeLinks = {
+    about: `${rootPrefix}oneswipe/about.html`,
+    support: `${rootPrefix}oneswipe/support.html`,
+    privacy: `${rootPrefix}oneswipe/privacy.html`
+  };
+
+  const buildOneSwipeMenu = (mobile = false) => {
+    const item = document.createElement("li");
+    item.className = mobile ? "mobile-nav-parent one-swipe-nav" : "has-dropdown one-swipe-nav";
+    item.innerHTML = `
+      <a href="${oneSwipeLinks.about}">One Swipe (iOS Game)</a>
+      <ul class="${mobile ? "mobile-sub-nav" : "dropdown-menu"}">
+        <li><a href="${oneSwipeLinks.about}">About the app</a></li>
+        <li><a href="${oneSwipeLinks.support}">Help &amp; Support</a></li>
+        <li><a href="${oneSwipeLinks.privacy}">Privacy Policy</a></li>
+      </ul>`;
+    return item;
+  };
+
+  const insertAfterMff = (navSelector, mobile = false) => {
+    const navList = document.querySelector(`${navSelector} > ul`);
+    if (!navList || navList.querySelector(".one-swipe-nav")) return;
+    const mffItem = Array.from(navList.children).find(item =>
+      item.querySelector(":scope > a")?.textContent.trim() === "My Furry Friends (iOS App)"
+    );
+    if (mffItem) mffItem.insertAdjacentElement("afterend", buildOneSwipeMenu(mobile));
+  };
+
+  insertAfterMff(".main-nav");
+  insertAfterMff(".mobile-nav", true);
 
   // ① ページ内リンククリック時：フェードアウトしてから遷移
   const links = document.querySelectorAll('a[href]');
