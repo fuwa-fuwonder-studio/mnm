@@ -934,21 +934,6 @@ body.story-page {
   36%, 64% { transform: translateX(calc(-100% - var(--tile-gap))); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .one-swipe-tile-blue,
-  .one-swipe-tile-red-moving {
-    animation: none;
-  }
-
-  .one-swipe-tile-blue {
-    transform: translateX(calc(100% + var(--tile-gap)));
-  }
-
-  .one-swipe-tile-red-moving {
-    transform: translateX(calc(-100% - var(--tile-gap)));
-  }
-}
-
 @media (max-width: 760px) {
   .one-swipe-download {
     flex-direction: column;
