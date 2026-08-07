@@ -52,12 +52,61 @@ document.addEventListener("DOMContentLoaded", () => {
   insertAfterMff(".main-nav");
   insertAfterMff(".mobile-nav", true);
 
+  // Turn the two app entries into compact mobile accordions.
+  const mobileNav = document.querySelector(".mobile-nav");
+  if (mobileNav) {
+    const mffItem = Array.from(mobileNav.querySelectorAll(":scope > ul > .mobile-nav-parent")).find(item =>
+      item.querySelector(":scope > a")?.textContent.trim() === "My Furry Friends (iOS App)"
+    );
+
+    if (mffItem) {
+      const mffBase = `${rootPrefix}mff/`;
+      const mffSubmenu = mffItem.querySelector(":scope > .mobile-sub-nav");
+      if (mffSubmenu) {
+        mffSubmenu.innerHTML = `
+          <li><a href="${mffBase}story.html">About the app</a></li>
+          <li><a href="${mffBase}FAQ.html">Help &amp; Support</a></li>
+          <li><a href="${mffBase}privacypolicy.html">Privacy Policy</a></li>`;
+      }
+    }
+
+    const accordionItems = mobileNav.querySelectorAll(".mobile-nav-parent");
+    accordionItems.forEach((item, index) => {
+      const trigger = item.querySelector(":scope > a");
+      const submenu = item.querySelector(":scope > .mobile-sub-nav");
+      if (!trigger || !submenu) return;
+
+      const submenuId = `mobile-app-submenu-${index + 1}`;
+      submenu.id = submenuId;
+      trigger.setAttribute("data-mobile-accordion-trigger", "");
+      trigger.setAttribute("role", "button");
+      trigger.setAttribute("aria-controls", submenuId);
+      trigger.setAttribute("aria-expanded", "false");
+
+      trigger.addEventListener("click", event => {
+        event.preventDefault();
+        const willOpen = !item.classList.contains("is-open");
+
+        accordionItems.forEach(otherItem => {
+          otherItem.classList.remove("is-open");
+          otherItem.querySelector(":scope > a")?.setAttribute("aria-expanded", "false");
+        });
+
+        if (willOpen) {
+          item.classList.add("is-open");
+          trigger.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+  }
+
   // ① ページ内リンククリック時：フェードアウトしてから遷移
   const links = document.querySelectorAll('a[href]');
 
   links.forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
+    if (link.hasAttribute("data-mobile-accordion-trigger")) return;
 
     // 外部リンク・新規タブ・アンカーは除外
     const isExternal = href.startsWith('http') && !href.startsWith(window.location.origin);
@@ -119,6 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // モバイルメニュー内のリンクをクリックしたらメニューを閉じる（任意）
     mobileMenu.querySelectorAll("a[href]").forEach(link => {
+      if (link.hasAttribute("data-mobile-accordion-trigger")) return;
       link.addEventListener("click", () => {
         mobileMenu.classList.remove("active");
       });

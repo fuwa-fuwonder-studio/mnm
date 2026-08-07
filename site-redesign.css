@@ -957,6 +957,51 @@ body.story-page {
   }
 }
 
+@media (max-width: 640px) {
+  .mobile-nav-parent > a[data-mobile-accordion-trigger] {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .mobile-nav-parent > a[data-mobile-accordion-trigger]::after {
+    content: "+";
+    flex: 0 0 auto;
+    color: var(--coral);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .mobile-nav-parent.is-open > a[data-mobile-accordion-trigger]::after {
+    content: "−";
+  }
+
+  .mobile-nav .mobile-sub-nav {
+    max-height: 0;
+    margin: 0;
+    padding-left: 16px;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 240ms ease, opacity 180ms ease, margin 240ms ease;
+  }
+
+  .mobile-nav-parent.is-open > .mobile-sub-nav {
+    max-height: 220px;
+    margin-top: 8px;
+    opacity: 1;
+  }
+
+  .mobile-nav .mobile-sub-nav li {
+    margin: 8px 0;
+  }
+
+  .mobile-nav .mobile-sub-nav a {
+    font-size: 14px;
+  }
+}
+
 /* Motion */
 .reveal-on-scroll {
   opacity: 0;
