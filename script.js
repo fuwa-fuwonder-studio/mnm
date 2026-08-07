@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "world.html": "page-world",
     "story.html": "page-story",
     "FAQ.html": "page-faq",
-    "privacypolicy.html": "page-privacypolicy"
+    "privacypolicy.html": "page-privacypolicy",
+    "support.html": "page-faq",
+    "privacy.html": "page-privacypolicy"
   };
 
   if (pageClassMap[pageName]) {
@@ -209,6 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return !target.classList.contains("hero-pop") &&
       !target.closest(".Nurie") &&
       !target.closest(".story-paw-field") &&
+      !target.closest(".one-swipe-tiles") &&
       !target.closest(".site-header");
   });
 

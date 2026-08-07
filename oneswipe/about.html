@@ -6,7 +6,7 @@
   <title>One Swipe | FuwaFuwonder Studio</title>
   <meta name="description" content="One Swipe is a one-move puzzle game from FuwaFuwonder Studio. Clear the whole board with a single swipe." />
   <link rel="stylesheet" href="../styles.css" />
-  <link rel="stylesheet" href="../site-redesign.css" />
+  <link rel="stylesheet" href="../site-redesign.css?v=20260807" />
   <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/fabicon180.png">
   <link rel="icon" type="image/png" sizes="180x180" href="../assets/img/fabicon180.png">
 </head>
@@ -49,35 +49,66 @@
     <div class="language-switcher"><button data-lang-btn="en">EN</button><span>·</span><button data-lang-btn="jp">JP</button></div>
   </header>
 
-  <main class="one-swipe-page">
-    <article class="one-swipe-content">
-      <h1>One Swipe</h1>
-      <p class="page-intro">
-        <span data-lang="en">One move. One chain reaction. Clear them all.</span>
-        <span data-lang="jp">一手でつなげて、すべて消そう。</span>
+  <main class="one-swipe-lp">
+    <section class="one-swipe-hero" aria-label="One Swipe">
+      <img src="../assets/img/one-swipe-hero.png" alt="One Swipe game board and Hairball Friends">
+    </section>
+
+    <section class="one-swipe-download" aria-label="One Swipe for iOS">
+      <img src="../assets/img/one-swipe-app-icon.png" alt="One Swipe app icon" class="one-swipe-app-icon">
+      <div class="one-swipe-store-coming-soon">
+        <img src="../assets/img/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917 1.png" alt="Download on the App Store">
+        <span><span data-lang="en">Coming soon</span><span data-lang="jp">近日公開予定</span></span>
+      </div>
+    </section>
+
+    <section class="one-swipe-intro">
+      <p class="one-swipe-tagline">
+        <span data-lang="en">Find the one swipe that clears them all.</span>
+        <span data-lang="jp">「全消し」へ導く、たった一手を見つけよう。</span>
       </p>
+      <h1><span data-lang="en">What is One Swipe?</span><span data-lang="jp">One Swipe（ワン・スワイプ）とは？</span></h1>
       <p>
-        <span data-lang="en">One Swipe is a compact puzzle game starring the Hairball Friends. Swap two neighboring characters with a single swipe, trigger matches and chain reactions, and clear the entire board in that one move.</span>
-        <span data-lang="jp">One Swipe は、Hairball Friends が登場するシンプルなパズルゲームです。隣り合うキャラクターを一度だけスワイプして入れ替え、マッチと連鎖を起こし、その一手で盤面をすべて消しましょう。</span>
+        <span data-lang="en">One Swipe is a compact puzzle game starring the Hairball Friends. Study the board, swap two neighboring characters just once, and turn that single move into a satisfying chain reaction that clears the whole board.</span>
+        <span data-lang="jp">One Swipe は、Hairball Friends が登場するひらめきパズルゲームです。盤面をよく見て、隣り合うキャラクターを入れ替えられるのは一度だけ。その一手から連鎖を起こし、盤面の「全消し」を目指します。</span>
       </p>
+    </section>
 
-      <h2><span data-lang="en">How to Play</span><span data-lang="jp">遊び方</span></h2>
-      <ol>
-        <li><span data-lang="en">Look carefully at the board.</span><span data-lang="jp">盤面をよく観察します。</span></li>
-        <li><span data-lang="en">Swipe one character toward a neighboring character to swap them.</span><span data-lang="jp">キャラクターを隣のマスへ一度スワイプして入れ替えます。</span></li>
-        <li><span data-lang="en">Three or more matching characters in a straight line disappear.</span><span data-lang="jp">同じキャラクターが縦または横に3体以上並ぶと消えます。</span></li>
-        <li><span data-lang="en">Clear every character through that move and its chain reactions to complete the level.</span><span data-lang="jp">その一手と連鎖ですべてのキャラクターを消すとレベルクリアです。</span></li>
-      </ol>
+    <section class="one-swipe-howto">
+      <div class="one-swipe-howto-copy">
+        <h2><span data-lang="en">How to Play</span><span data-lang="jp">遊び方</span></h2>
+        <p class="one-swipe-howto-lead">
+          <span data-lang="en">Red, red, blue, red. Swap the last two tiles and the three red Hairball Friends line up.</span>
+          <span data-lang="jp">赤・赤・青・赤。最後の2つを入れ替えると、赤のHairball Friendsが3体そろいます。</span>
+        </p>
+        <ol>
+          <li><span data-lang="en">Look carefully at the board.</span><span data-lang="jp">盤面をじっくり観察。</span></li>
+          <li><span data-lang="en">Swipe once to swap two neighboring characters.</span><span data-lang="jp">隣り合うキャラクターを一度だけスワイプ。</span></li>
+          <li><span data-lang="en">Match three or more in a straight line to start a chain reaction.</span><span data-lang="jp">同じキャラクターを縦か横に3体以上そろえて連鎖を起こします。</span></li>
+          <li><span data-lang="en">Clear every tile with that one move to complete the level.</span><span data-lang="jp">その一手で盤面を全消しできれば、レベルクリア。</span></li>
+        </ol>
+      </div>
+      <div class="one-swipe-demo" aria-label="Red red blue red tiles swapping into red red red blue">
+        <div class="one-swipe-tiles">
+          <div class="one-swipe-tile"><img src="../assets/img/one-swipe-tile-red.png" alt="Red Hairball Friend"></div>
+          <div class="one-swipe-tile"><img src="../assets/img/one-swipe-tile-red.png" alt="Red Hairball Friend"></div>
+          <div class="one-swipe-tile one-swipe-tile-blue"><img src="../assets/img/one-swipe-tile-blue.png" alt="Blue Hairball Friend"></div>
+          <div class="one-swipe-tile one-swipe-tile-red-moving"><img src="../assets/img/one-swipe-tile-red.png" alt="Red Hairball Friend"></div>
+        </div>
+        <p><span data-lang="en">One swipe → Complete clear!</span><span data-lang="jp">一手のスワイプから、全消しへ！</span></p>
+      </div>
+    </section>
 
+    <section class="one-swipe-value">
       <h2><span data-lang="en">A Tiny Puzzle with a Big “Aha!”</span><span data-lang="jp">小さな盤面に、大きなひらめき</span></h2>
       <p>
-        <span data-lang="en">Every level has a solution hidden in plain sight. Take your time, find the decisive move, and enjoy the satisfying cascade.</span>
-        <span data-lang="jp">どのレベルにも、盤面の中に答えが隠れています。じっくり考えて決め手となる一手を見つけ、気持ちのよい連鎖をお楽しみください。</span>
+        <span data-lang="en">Every level has a solution hidden in plain sight. Take your time, discover the decisive move, and enjoy the moment when the whole board disappears.</span>
+        <span data-lang="jp">どのレベルにも、盤面の中に答えが隠れています。じっくり考えて決め手となる一手を見つけ、すべてが消える瞬間の爽快感をお楽しみください。</span>
       </p>
-    </article>
+    </section>
   </main>
 
   <footer class="site-footer"><small>© FuwaFuwonder Studio. All colours, cats, and hairballs reserved.</small></footer>
-  <script src="../script.js?v=20260806"></script>
+  <script src="../script.js?v=20260807"></script>
 </body>
 </html>
