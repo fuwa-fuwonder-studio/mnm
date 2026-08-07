@@ -236,6 +236,33 @@ main > section:nth-child(even) {
   background-color: var(--paper) !important;
 }
 
+.one-swipe-home-section {
+  background-color: #ffebd1 !important;
+}
+
+.one-swipe-home-icon {
+  border-radius: 24%;
+}
+
+.one-swipe-home-title {
+  width: min(420px, 42vw);
+}
+
+.home-store-coming-soon {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.home-store-coming-soon > img {
+  opacity: 0.74;
+}
+
+.home-store-coming-soon > span {
+  color: var(--coral);
+  font-weight: 700;
+}
+
 .app-inner {
   width: min(1000px, 100%);
   min-height: 500px;
