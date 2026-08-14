@@ -1157,6 +1157,18 @@ body.story-page {
 
 .one-swipe-world-card:hover { transform: translateY(-8px); box-shadow: 0 26px 48px rgba(85, 66, 58, .16); }
 .one-swipe-world-card img { display: block; width: 100%; aspect-ratio: 1; object-fit: contain; padding: 14px 10px 0; }
+.one-swipe-world-art {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  aspect-ratio: 1;
+}
+.one-swipe-world-art-layered img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
 .one-swipe-world-card > div { min-height: 180px; padding: 4px 24px 26px; text-align: center; }
 .one-swipe-world-card > div > span { color: rgba(85, 66, 58, .64); font-size: 12px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; }
 .one-swipe-world-card h3 { margin: 7px 0 12px; color: var(--os-brown); font-family: "PaytoneOne", sans-serif; font-size: clamp(20px, 2vw, 27px); line-height: 1.2; }
@@ -1168,7 +1180,7 @@ body.story-page {
 .world-snow { background: #e7f3f8; }
 .world-beach { background: #ffe3ba; }
 .world-sky { background: #e5ecfa; }
-.world-space { color: #f8f1ff; background: #ddd8f2; }
+.world-space { color: var(--os-brown); background: #ddd8f2; }
 
 .one-swipe-howto-v2 { position: relative; background: #cce7ef !important; }
 .one-swipe-howto-v2::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 88% 18%, rgba(255,255,255,.55) 0 6%, transparent 6.2%); }
