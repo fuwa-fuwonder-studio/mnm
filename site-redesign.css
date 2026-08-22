@@ -805,6 +805,16 @@ body.story-page {
   border-top: 2px solid var(--mint);
 }
 
+.one-swipe-privacy ul {
+  margin: 4px 0 20px;
+  padding-left: 1.4em;
+}
+
+.one-swipe-privacy li {
+  margin: 7px 0;
+  line-height: 1.7;
+}
+
 /* One Swipe landing page */
 .one-swipe-lp {
   background: #ffebd1;
@@ -1169,6 +1179,9 @@ body.story-page {
 .world-beach { background: #ffe3ba; }
 .world-sky { background: #e5ecfa; }
 .world-space { color: var(--os-brown); background: #ddd8f2; }
+.world-volcano { background: #f6d3c2; }
+.world-dino { background: #dcebc9; }
+.world-blossom { background: #f7dce8; }
 
 .one-swipe-howto-v2 { position: relative; background: #cce7ef !important; }
 .one-swipe-howto-v2::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: radial-gradient(circle at 88% 18%, rgba(255,255,255,.55) 0 6%, transparent 6.2%); }
