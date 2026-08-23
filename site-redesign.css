@@ -1677,12 +1677,7 @@ body.story-page {
 }
 
 .happyward-home-coming-soon {
-  display: inline-flex;
-  padding: 10px 18px;
-  color: var(--ink);
-  background: var(--sun);
-  border-radius: 999px;
-  font-weight: 700;
+  margin-inline: auto;
 }
 
 .happyward-lp { background: #fff8e9; }
