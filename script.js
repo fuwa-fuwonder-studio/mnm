@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const pageName = window.location.pathname.split("/").pop() || "index.html";
   const pageClassMap = {
-    "about.html": window.location.pathname.includes("/oneswipe/") ? "page-one-swipe-about" : "page-about",
+    "about.html": window.location.pathname.includes("/oneswipe/") ? "page-one-swipe-about" : window.location.pathname.includes("/happyward/") ? "page-happyward-about" : "page-about",
     "hairball-friends.html": "page-hairball-friends",
     "mff.html": "page-mff",
     "world.html": "page-world",
@@ -16,15 +16,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add(pageClassMap[pageName]);
   }
 
-  // Keep the One Swipe menu consistent across every existing page without
-  // duplicating the same header change in each HTML file.
+  // Keep all app menus consistent across every page without duplicating the
+  // same header change in every HTML file.
   const isNestedPage = window.location.pathname.includes("/mff/") ||
-    window.location.pathname.includes("/oneswipe/");
+    window.location.pathname.includes("/oneswipe/") ||
+    window.location.pathname.includes("/happyward/");
   const rootPrefix = isNestedPage ? "../" : "";
   const oneSwipeLinks = {
     about: `${rootPrefix}oneswipe/about.html`,
     support: `${rootPrefix}oneswipe/support.html`,
     privacy: `${rootPrefix}oneswipe/privacy.html`
+  };
+  const happywardLinks = {
+    about: `${rootPrefix}happyward/about.html`,
+    support: `${rootPrefix}happyward/support.html`,
+    privacy: `${rootPrefix}happyward/privacy.html`
   };
 
   const buildOneSwipeMenu = (mobile = false) => {
@@ -36,6 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
         <li><a href="${oneSwipeLinks.about}">About the app</a></li>
         <li><a href="${oneSwipeLinks.support}">Help &amp; Support</a></li>
         <li><a href="${oneSwipeLinks.privacy}">Privacy Policy</a></li>
+      </ul>`;
+    return item;
+  };
+
+  const buildHappywardMenu = (mobile = false) => {
+    const item = document.createElement("li");
+    item.className = mobile ? "mobile-nav-parent happyward-nav" : "has-dropdown happyward-nav";
+    item.innerHTML = `
+      <a href="${happywardLinks.about}"><span data-lang="en">Happyward</span><span data-lang="jp">幸せの逆算</span></a>
+      <ul class="${mobile ? "mobile-sub-nav" : "dropdown-menu"}">
+        <li><a href="${happywardLinks.about}">About the app</a></li>
+        <li><a href="${happywardLinks.support}">Help &amp; Support</a></li>
+        <li><a href="${happywardLinks.privacy}">Privacy Policy</a></li>
       </ul>`;
     return item;
   };
@@ -52,7 +71,17 @@ document.addEventListener("DOMContentLoaded", () => {
   insertAfterMff(".main-nav");
   insertAfterMff(".mobile-nav", true);
 
-  // Turn the two app entries into compact mobile accordions.
+  const insertAfterOneSwipe = (navSelector, mobile = false) => {
+    const navList = document.querySelector(`${navSelector} > ul`);
+    if (!navList || navList.querySelector(".happyward-nav")) return;
+    const oneSwipeItem = navList.querySelector(".one-swipe-nav");
+    if (oneSwipeItem) oneSwipeItem.insertAdjacentElement("afterend", buildHappywardMenu(mobile));
+  };
+
+  insertAfterOneSwipe(".main-nav");
+  insertAfterOneSwipe(".mobile-nav", true);
+
+  // Turn the app entries into compact mobile accordions.
   const mobileNav = document.querySelector(".mobile-nav");
   if (mobileNav) {
     const mffItem = Array.from(mobileNav.querySelectorAll(":scope > ul > .mobile-nav-parent")).find(item =>
