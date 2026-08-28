@@ -1676,7 +1676,7 @@ body.story-page {
   margin: 4px auto 14px;
 }
 
-.happyward-home-coming-soon {
+.happyward-home-store {
   margin-inline: auto;
 }
 
@@ -1718,13 +1718,18 @@ body.story-page {
   font-size: clamp(36px, 5vw, 68px);
 }
 
-.happyward-coming-soon {
-  display: inline-flex;
+.happyward-download {
   margin-top: 22px;
-  padding: 12px 20px;
-  background: var(--sun);
-  border-radius: 999px;
-  font-weight: 800;
+}
+
+.happyward-download a {
+  display: inline-block;
+}
+
+.happyward-download img {
+  display: block;
+  width: 190px;
+  height: auto;
 }
 
 .happyward-promise,
