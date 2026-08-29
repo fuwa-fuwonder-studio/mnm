@@ -1780,6 +1780,17 @@ body.story-page {
 }
 
 .happyward-steps h3 { color: #7a594e; font-size: 25px; }
+.happyward-room-update {
+  padding: clamp(82px, 10vw, 140px) max(24px, calc((100vw - 1120px) / 2));
+  background: #f6e8e6 !important;
+}
+.happyward-room-copy { max-width: 820px; margin: 0 auto 42px; text-align: center; }
+.happyward-room-copy h2 { margin: 0 0 24px; color: #7a594e; font-size: clamp(36px, 5vw, 62px); }
+.happyward-room-copy p:not(.happyward-kicker) { max-width: 760px; margin: 0 auto 16px; }
+.happyward-room-gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.happyward-room-gallery figure { margin: 0; overflow: hidden; background: #fffaf1; border-radius: 30px; box-shadow: var(--shadow); }
+.happyward-room-gallery img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.happyward-room-gallery figcaption { padding: 17px 20px 19px; color: #7a594e; font-size: 14px; font-weight: 800; text-align: center; }
 .happyward-feature { grid-template-columns: minmax(0, 1.05fr) minmax(280px, .95fr); background: #dcebdc !important; }
 .happyward-feature-reverse { background: #dcecf1 !important; }
 .happyward-feature-reverse div { order: 2; }
@@ -1805,6 +1816,7 @@ body.story-page {
   .happyward-intro-art img { margin: auto; }
   .happyward-intro-copy .happyward-language-note { margin-inline: auto; }
   .happyward-steps { grid-template-columns: 1fr; }
+  .happyward-room-gallery { grid-template-columns: 1fr; }
   .happyward-steps article { max-width: 540px; margin: auto; }
   .happyward-feature-reverse div { order: initial; }
 }
@@ -1814,6 +1826,7 @@ body.story-page {
   .happyward-intro h1,
   .happyward-promise h2,
   .happyward-feature h2,
+  .happyward-room-copy h2,
   .happyward-final h2 { font-size: 35px; }
   .happyward-home-title { width: 100% !important; }
 }
