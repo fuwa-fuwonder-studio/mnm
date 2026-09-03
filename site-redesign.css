@@ -866,6 +866,15 @@ body.story-page {
   font-weight: 700;
 }
 
+.one-swipe-store-link {
+  display: block;
+}
+
+.one-swipe-store-link img {
+  display: block;
+  width: clamp(180px, 25vw, 280px);
+}
+
 .one-swipe-intro,
 .one-swipe-value {
   padding: 100px max(24px, calc((100vw - 900px) / 2));
